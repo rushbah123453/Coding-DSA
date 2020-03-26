@@ -22,44 +22,36 @@ public class Problem3 {
 
             }
 
-        System.out.println(    floorOfNumber(a,innerCase[1]));
+        System.out.println(floorSearch(a,0,a.length-1,innerCase[1]));
 
         }
 
     }
 
-    private static int floorOfNumber(int[] a, int nos) {
+    private static int floorSearch(int[] arr, int low,int high,int x) {
 
-if(nos<a[0])
-  return -1;
-
-if (nos>a[a.length-1])
-    return a[a.length-1];
-
-int low=0;
-int high=a.length-1;
+        if (low > high)
+            return -1;
 
 
+        if (x >= arr[high])
+            return high;
 
-while (low<=high){
-    int mid=low+((high-low)/2);
-    if (a[mid]==nos){
-        return nos;
-    }
-    else if(a[mid-1]<=nos && nos<a[mid] && mid>0)
-    {
-        return mid-1;
-    }else if(nos<a[mid]){
-        high=mid-1;
-    }
-    else if (a[mid-1]<=nos && nos<a[mid] && mid>0){
-        return a[mid-1];
-    }
+        int mid = (low+high)/2;
 
-}
+        if (arr[mid] == x)
+            return mid;
 
+        if (mid > 0 && arr[mid-1] <= x && x <
+                arr[mid])
+            return mid-1;
 
-    return -1;
+        if (x < arr[mid])
+            return floorSearch(arr, low,
+                    mid - 1, x);
+
+        return floorSearch(arr, mid + 1, high,
+                x);
 
     }
 
