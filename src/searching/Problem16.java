@@ -28,30 +28,47 @@ public class Problem16 {
         int min=0,max=0,i=0,j=0,profit=0;
         int n=a.length-1;
 
-       while (i<=n){
 
-           if (n==1)
-               break;
+           while (i<=n && j<=n && n>1){
+              if (i<n && a[i]>a[i+1]){
+                  i++;
+           continue;
+              }else if(i==n){
+                  break;
+              } else{
+                  min=a[i];
+                  j=i+1;
+                  while (j<=n){
 
-           while (i<n && a[i]>a[i+1]){
-               i++;
+
+                      if (j!=n && j<n && a[j]< a[j+1]){
+                          j++;
+                          continue;
+                      }
+                      else {
+                          max=a[j];
+                          profit+=(max-min);
+                          i=j+1;
+                          break;
+                      }
+              }
+
+
+
+
+
+
+
+
+              }
            }
 
-           if (i==n)
-               break;
-
-           min=a[i];
-
-           while (i<n && a[i]<a[i+1]){
-               i++;
-           }
-
-           max=a[i];
 
 
-           profit+=(max-min);
 
-       }
+         //  profit+=(max-min);
+
+
 
 System.out.println(profit);
 

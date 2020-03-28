@@ -44,7 +44,7 @@ public class Problem14 {
                 System.out.println(mid);
                 break;
             }
-            if (moneyArray<a[mid]){
+            if (moneyArray<=a[mid]){
                 high=mid-1;
             }
             else if (moneyArray>a[mid]){
