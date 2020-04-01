@@ -1,7 +1,9 @@
 /*
  * Synchronized Approach
  *
- * DrawBack :  Thread safe , Decreases the performance
+ * Advantages: Thread safe
+ *
+ * DrawBack :  Decreases the performance
  *
  * Synchronized is only required for first time , when one object is created we dont need synchronized
  * Hence it decreases the performance because threads wait to check if previous thread have completed operation or not

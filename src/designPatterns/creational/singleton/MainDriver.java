@@ -7,8 +7,6 @@ public class MainDriver {
         /**
          * Lazy Approach - Not Thread Safe
          */
-
-
         LazyEvaluation instance=LazyEvaluation.getInstance();
         instance.setData(25);
         System.out.println("First reference"+instance);
@@ -24,13 +22,11 @@ public class MainDriver {
         System.out.println("Data: "+newInstance.getData());
 
 
+
         /**
          *
          * Synchronized Approach : Thread safe ,But decrease the performance
          */
-
-
-
         SynchronizedApproach synchronizedApproach=SynchronizedApproach.getInstance();
         synchronizedApproach.setData(26);
         System.out.println("First reference"+synchronizedApproach);
@@ -42,8 +38,31 @@ public class MainDriver {
         System.out.println("Data: "+synchronizedApproach.getData());
 
         SynchronizedApproach synchronizedApproach1=SynchronizedApproach.getInstance();
-        System.out.println("Third reference"+synchronizedApproach);
-        System.out.println("Data: "+synchronizedApproach.getData());
+        System.out.println("Third reference"+synchronizedApproach1);
+        System.out.println("Data: "+synchronizedApproach1.getData());
+
+
+
+
+
+
+        /**
+         *
+         * Double-Checked Approach : Thread safe , High performance
+         */
+        DoubleChecked doubleChecked=DoubleChecked.getInstance();
+        doubleChecked.setData(27);
+        System.out.println("First reference"+doubleChecked);
+        System.out.println("Data: "+doubleChecked.getData());
+
+        doubleChecked=null;
+        doubleChecked=DoubleChecked.getInstance();
+        System.out.println("Second reference"+doubleChecked);
+        System.out.println("Data: "+doubleChecked.getData());
+
+        DoubleChecked doubleChecked1=DoubleChecked.getInstance();
+        System.out.println("Third reference"+doubleChecked1);
+        System.out.println("Data: "+doubleChecked1.getData());
 
 
 
