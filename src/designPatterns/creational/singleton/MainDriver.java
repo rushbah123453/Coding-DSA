@@ -66,5 +66,27 @@ public class MainDriver {
 
 
 
+        /**
+         *
+         * Eager-Initialization Approach : Thread safe , High performance
+         * JVM initializes the instance when classis loaded ,so we dont need to use synchronized
+         * Drawback: This instance will be created even if the client never uses it
+         */
+        EagerInit eagerInit=EagerInit.getInstance();
+        eagerInit.setData(28);
+        System.out.println("First reference"+eagerInit);
+        System.out.println("Data: "+eagerInit.getData());
+
+        eagerInit=null;
+        eagerInit=EagerInit.getInstance();
+        System.out.println("Second reference"+eagerInit);
+        System.out.println("Data: "+eagerInit.getData());
+
+        EagerInit eagerInit1=EagerInit.getInstance();
+        System.out.println("Third reference"+eagerInit1);
+        System.out.println("Data: "+eagerInit1.getData());
+
+
+
     }
 }
