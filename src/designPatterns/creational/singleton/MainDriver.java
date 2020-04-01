@@ -44,8 +44,6 @@ public class MainDriver {
 
 
 
-
-
         /**
          *
          * Double-Checked Approach : Thread safe , High performance
@@ -86,6 +84,27 @@ public class MainDriver {
         System.out.println("Third reference"+eagerInit1);
         System.out.println("Data: "+eagerInit1.getData());
 
+
+
+        /**
+         *
+         * Bill-Pugh Approach : Thread safe , High performance
+         * JVM initializes the instance when static inner method is called ,
+         *  This instance will be created only if the client calls it
+         */
+        Bill_Pugh_Approach bill_pugh_approach=Bill_Pugh_Approach.getInstance();
+        bill_pugh_approach.setData(29);
+        System.out.println("First reference"+bill_pugh_approach);
+        System.out.println("Data: "+bill_pugh_approach.getData());
+
+        bill_pugh_approach=null;
+         bill_pugh_approach=Bill_Pugh_Approach.getInstance();
+        System.out.println("Second reference"+bill_pugh_approach);
+        System.out.println("Data: "+bill_pugh_approach.getData());
+
+        Bill_Pugh_Approach bill_pugh_approach1=Bill_Pugh_Approach.getInstance();
+        System.out.println("Third reference"+bill_pugh_approach1);
+        System.out.println("Data: "+bill_pugh_approach1.getData());
 
 
     }
