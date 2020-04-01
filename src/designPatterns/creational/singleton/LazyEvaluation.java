@@ -1,3 +1,11 @@
+/*
+* Lazy Approach
+*
+* DrawBack : Not Thread safe
+*
+* */
+
+
 package designPatterns.creational.singleton;
 
 public class LazyEvaluation {
