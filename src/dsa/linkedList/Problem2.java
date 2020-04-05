@@ -27,27 +27,19 @@ public class Problem2 {
     }
 
     private static void moveLastToFront() {
-
         Node2 temp=head;
-
         while (temp.next!=null && temp.next.next!=null){
          temp=temp.next;
         }
-
-
-
-        if(temp!=head){
+        if(temp!=head || temp.next!=null){
             temp.next.next=head;
             head=temp.next;
             temp.next=null;
         }else {
             printList();
-            return;
+                return;
         }
-
-
         printList();
-
     }
 
 
