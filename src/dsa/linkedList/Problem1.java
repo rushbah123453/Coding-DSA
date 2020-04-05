@@ -18,20 +18,23 @@ public class Problem1 {
             }
 
 
-            int mid=arraySize/2;
-            findMiddleNode(mid);
+
+            findMiddleNode();
             head=null;
         }
     }
 
-    private static void findMiddleNode(int mid) {
-        Node temp=head;
-        int count=0;
-        while (temp!=null && count<mid){
-            temp=temp.next;
-            count++;
+    private static void findMiddleNode() {
+        Node slow_ptr=head;
+        Node fast_ptr=head;
+
+        while (fast_ptr!=null && fast_ptr.next!=null){
+            fast_ptr=fast_ptr.next.next;
+            slow_ptr=slow_ptr.next;
         }
-        System.out.println(temp.data);
+
+
+        System.out.println(slow_ptr.data);
     }
 
 
@@ -50,6 +53,9 @@ public class Problem1 {
 
         }
     }
+
+
+
 
 }
 
