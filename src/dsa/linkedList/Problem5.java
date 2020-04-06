@@ -19,6 +19,7 @@ public class Problem5 {
             }
 
 
+
             printList();
             head=null;
         }
