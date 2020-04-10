@@ -11,8 +11,6 @@ public class PrintOddEvenon2Threads  implements Runnable{
         this.isEven = isEven;
         this.print=print;
     }
-
-
     @Override
     public void run() {
         int number=isEven?2:1;
@@ -26,15 +24,10 @@ public class PrintOddEvenon2Threads  implements Runnable{
         }
     }
 
-
-
-
     public static void main(String[] args) {
         Print print=new Print();
-
         Thread odd=new Thread(new PrintOddEvenon2Threads(10,false,print),"odd");
         Thread even=new Thread(new PrintOddEvenon2Threads(10,true,print),"even");
-
         odd.start();
         even.start();
 
@@ -44,7 +37,7 @@ public class PrintOddEvenon2Threads  implements Runnable{
 }
 class Print{
     private volatile boolean isOdd=false;
-    synchronized   void getOddNumer(int number) {
+    synchronized  void getOddNumer(int number) {
         while (isOdd){
             try {
                 wait();
