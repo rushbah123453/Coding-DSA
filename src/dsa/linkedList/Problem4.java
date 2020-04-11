@@ -68,8 +68,6 @@ public class Problem4 {
                 temp = temp.next;
             }
             temp.next = newNode4;
-
-
         }
     }
 

@@ -1,14 +1,8 @@
 package dsa.linkedList;
-
-
-
 import java.util.Scanner;
-
 public class Problem5 {
-
     static Node5 head=null;
     public static void main(String[] args) {
-
         Scanner scanner=new Scanner(System.in);
         int testCases=scanner.nextInt();
         for (int i=0;i<testCases;i++) {
@@ -17,25 +11,15 @@ public class Problem5 {
             for (int j = 0; j < arraySize; j++) {
               insertAtBegining (scanner.nextInt());
             }
-
-
-
             printList();
             head=null;
         }
     }
-
-
-
     public static void insertAtBegining(int data){
         Node5 newNode=new Node5(data);
         newNode.next=head;
         head=newNode;
     }
-
-
-
-
     public static void printList(){
         Node5 temp=head;
         while (temp!=null){
@@ -44,10 +28,7 @@ public class Problem5 {
         }
         System.out.println("");
     }
-
-
 }
-
 class Node5{
     int data;
     Node5 next;
