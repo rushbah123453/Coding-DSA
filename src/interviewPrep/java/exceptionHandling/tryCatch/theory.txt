@@ -14,6 +14,7 @@ Try catch finally
 
 throw: Throw keyword is used to transfer control from try block to catch block.
 
+
 throws:Throws keyword is used for exception handling without try & catch block.
 It specifies the exceptions that a method can throw to the caller and does not handle itself.
 
