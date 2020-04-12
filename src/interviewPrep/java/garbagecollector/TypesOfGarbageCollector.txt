@@ -1,0 +1,43 @@
+1)Serial GC
+2)Parallel GC
+3)Concurrent Mark Sweep CMS GC
+4)G1 GC
+5)Z GC
+
+Garbage collector run with help of daemon thread : Daemon thread runs in background
+
+
+Serial  Garbage Collector
+1) Runs on Single Thread to collect the garbage
+2)It basically freezes application threads and it will create single thread to perform garbage collection
+3)Hence the throughput will decrease and application pause time will increase
+4)If you want to use serial garbage collector, then we have to explicitly mention while running jar like:
+java -XX:+UseSerialGC -jar GFGApplicationJar.java
+
+
+Parallel Garbage Collector (Default GC For JDK8)
+1)Similar to Serial GC , But it is multi Threaded
+2)It freezes the appliction thread and it will run multiple thread to collect the Garbage
+3) This type of GC also freezes the application reducing throughput and increasing pause time
+4)We can specify the number of threads and maximum pause time
+java -XX:+UseParallelGC -XX:ParallelGCThreads=NumberOfThreads -jar GFGApplicationJar.java
+java -XX:+UseParallelGC -XX:MaxGCPauseMillis=SecInMillisecond -jar GFGApplicationJar.java
+java -XX:+UseParallelGC -jar GFGApplicationJar.java
+
+Concurrent Mark Sweep Garbage Collector
+1)It uses Mark Sweep Algorithm for Garbage Collection
+2)CMS will freeeze the Application thread only on 2 scenarios
+a)If there is a change in Heap Memory
+b)While marking the referenced objects in the old generation space.
+3)CMS uses more CPU Resources to increase the Application throughput
+java -XX:+UseParNewGC -jar GFGApplicationJar.java
+
+
+G1 GC (Default GC For Java 9)
+1)The Heap is divided in regions to collect the garbage
+2)The region with more amount of memory will be garbage collected first , thats why G1 GC
+3)Garbage is collected parallelly
+4)G1 Also compact the free heap space after round of GC , hence reducing fragmentation
+java -XX:+UseG1GC -jar GFGApplicationJar.java
+
+

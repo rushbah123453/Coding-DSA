@@ -1,0 +1,23 @@
+This GC Algorithm and contains 2 phases
+
+1)Mark
+2)Sweep
+
+
+1)Mark
+
+1)In this mark phase , the GC sets the value true to the live/reachable objects
+2)The marking is done in graph traversal way , Depth-First Search Algorithm
+3)Here we can consider every object as a node and then all the nodes (objects) that are reachable from this node (object)
+are visited and it goes on till we have visited all the reachable nodes.
+
+
+
+2)Sweep Phase
+
+1)Here it sweeps the unreachable object/Unset bits i.e flag=false
+2)Also maintains a free-list (LinkedList) of free memory
+
+
+Disadvantages:
+Fragmentation: Free spaces might be in different location
