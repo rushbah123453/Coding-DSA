@@ -1,0 +1,29 @@
+Abstract Class-
+
+1) Abstract class can extend classes as well as implement Interfaces
+2) In Abstract class , methods can or cannot be abstract
+3) In Abstract class you can have final , static non static variables
+4) You can use public,protected,private access modifier
+
+
+Interface:
+
+1) Interface can only extend interfaces , it cannot implement classes
+2) In Interface all methods are abstract .
+3) In Interface , it can have only static final variable
+4) Members are public by default
+
+
+When to use What ?
+
+1) If you have same line of code that are tio be shared by 2 or more classes
+- Use Abstract class , define method here and let the class extend the abstract class
+
+2)If you need access specifier other then public in sub class or want to define static non static variable
+-Use Abstract class
+
+3)If you dont care about the implementation and have diff implementation for each class
+-Use Interface
+
+4)If you want to bond a contract that all methods in sub class should be implemented
+-Use interface
