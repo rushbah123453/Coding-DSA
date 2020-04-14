@@ -30,7 +30,6 @@ public class PrintOddEvenon2Threads  implements Runnable{
         Thread even=new Thread(new PrintOddEvenon2Threads(10,true,print),"even");
         odd.start();
         even.start();
-
     }
 
 
