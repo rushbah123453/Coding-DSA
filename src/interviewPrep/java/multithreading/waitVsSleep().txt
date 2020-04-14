@@ -1,0 +1,9 @@
+
+Wait()
+1)wait will release the lock after notify or notifyAll() is invoked and must be called from the synchronized context,
+
+
+sleep()
+1)while sleep will only pause the thread for some time and keep the lock even if notify or notifyAll() is called it wont release the lock.
+
+

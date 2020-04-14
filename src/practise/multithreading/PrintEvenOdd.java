@@ -30,8 +30,9 @@ public class PrintEvenOdd implements Runnable{
         Print print=new Print();
         Thread odd=new Thread(new PrintEvenOdd(10,false,print));
         Thread even=new Thread(new PrintEvenOdd(10,true,print));
-        odd.start();
-        even.start();
+       odd.start();
+       odd.start();
+       even.start();
     }
 
 
@@ -44,7 +45,7 @@ public class PrintEvenOdd implements Runnable{
             try {
                 wait();
             }catch (Exception e){
-
+Thread.currentThread().interrupt();
             }
         }
         System.out.println("Even "+number);
@@ -60,7 +61,7 @@ public class PrintEvenOdd implements Runnable{
              try {
                  wait();
              }catch (Exception e){
-
+Thread.currentThread().interrupt();
              }
          }
          System.out.println("Odd "+number);
