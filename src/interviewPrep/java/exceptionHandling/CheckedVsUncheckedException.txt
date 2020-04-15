@@ -1,0 +1,6 @@
+Checked Exception :
+
+We need to handle this kind of exception , otherwise it wont compile
+
+How JVM knows that it is checked exception ?
+-Every class extended with Exception is eligible checked Exception

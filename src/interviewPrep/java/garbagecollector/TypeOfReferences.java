@@ -12,11 +12,15 @@ package interviewPrep.java.garbagecollector;
 
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Set;
 
 public class TypeOfReferences {
 
     public static void main(String[] args)
     {
+
+
 
         //For Weak Reference
 

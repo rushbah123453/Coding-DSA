@@ -1,0 +1,11 @@
+String a="1";
+String b="2";
+
+a==b ? true or false ?
+
+Generally You will say == COMPARES THE REFERENCE OF OBJECT , and as object object are different it will return false
+
+But , heres the String literal pool Concept , a will point to 1 in string literal pool and b will also point to the same pool
+So , same reference and hence equal
+
+
