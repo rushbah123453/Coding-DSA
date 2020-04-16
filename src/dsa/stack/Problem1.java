@@ -13,24 +13,30 @@ public class Problem1 {
             int input=scanner.nextInt();
             String inputString=scanner.next();
                 checkClosingBracket(inputString);
-
         }
     }
-
     private static void checkClosingBracket(String inputString) {
         Stack<Character> stack=new Stack<>();
         int count=0;
+        boolean flag=false;
         for (int i=0;i<inputString.length();i++){
             if (inputString.charAt(i)=='<'){
                 stack.push('<');
             }else if (inputString.charAt(i)=='>'){
-                if (!stack.isEmpty() && stack.pop()=='<'){
-                    count+=2;
-                }else {
+                if(stack.isEmpty()){
                     break;
                 }
+                else {
+                    stack.pop();
+                }
+            }
+
+            if(stack.isEmpty()){
+                count=i+1;
             }
         }
-        System.out.println(count);
+
+            System.out.println(count);
+
     }
 }
