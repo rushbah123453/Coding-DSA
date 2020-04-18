@@ -10,7 +10,6 @@ public class Problem3 {
         String moleculeFormula = scanner.next();
         calculateMass(moleculeFormula);
     }
-
     private static void calculateMass(String moleculeFormula) {
         char charAt;
         int result = 0;
