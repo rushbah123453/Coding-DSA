@@ -1,5 +1,6 @@
 package dsa.stack;
 
+import java.io.FileInputStream;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -7,13 +8,14 @@ public class Problem2 {
 
 
     public static void main(String[] args) {
+
+
         Scanner scanner=new Scanner(System.in);
-        String inputString=scanner.next();
+       String inputString=scanner.next();
         simplifyDirectory(inputString);
     }
 
     private static void simplifyDirectory(String inputString) {
-
         Stack<String> stack=new Stack<>();
         StringBuilder stringParser=new StringBuilder();
 
