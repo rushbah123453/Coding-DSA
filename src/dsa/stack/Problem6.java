@@ -12,6 +12,8 @@ public class Problem6 {
             inputVaue += scanner.next()+" ";
         }
         evaluatePostFix(inputVaue);
+
+
     }
 
     private static void evaluatePostFix(String inputVaue) {
