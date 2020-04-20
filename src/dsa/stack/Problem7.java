@@ -1,3 +1,4 @@
+//https://mycode.prepbytes.com/problems/stacks/INXPOX
 package dsa.stack;
 
 import java.util.Scanner;
@@ -28,13 +29,12 @@ public class Problem7 {
 
             else if (inputString.charAt(i) == ')') {
 
-                while (!stack.isEmpty() && stack.peek()!='(')
+                while (!stack.isEmpty() && stack.peek() != '(')
                     result.append(stack.pop());
 
                 stack.pop();//remove (
-            }
-            else {
-                while (!stack.isEmpty() && isPrecedenceHigh(inputString.charAt(i))<=isPrecedenceHigh(stack.peek())){
+            } else {
+                while (!stack.isEmpty() && isPrecedenceHigh(inputString.charAt(i)) <= isPrecedenceHigh(stack.peek())) {
                     result.append(stack.pop());
                 }
                 stack.push(inputString.charAt(i));
@@ -44,7 +44,7 @@ public class Problem7 {
         }
 
 
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             result.append(stack.pop());
         }
         System.out.println(result);
@@ -53,10 +53,12 @@ public class Problem7 {
 
     private static int isPrecedenceHigh(Character operator) {
         switch (operator) {
-            case '+':return 1;
+            case '+':
+                return 1;
             case '-':
                 return 2;
-            case '*': return 3;
+            case '*':
+                return 3;
             case '/':
                 return 4;
             case '^':

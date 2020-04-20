@@ -9,7 +9,7 @@ public class Problem6 {
         int inputSize = scanner.nextInt();
         String inputVaue = "";
         for (int i = 0; i < inputSize; i++) {
-            inputVaue += scanner.next()+" ";
+            inputVaue += scanner.next() + " ";
         }
         evaluatePostFix(inputVaue);
 
