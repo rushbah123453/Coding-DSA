@@ -1,13 +1,11 @@
-package interviewPrep.designPatterns.behavioral.Iterator;
-
-import java.util.Collections;
+package interviewPrep.designPatterns.behavioral.Iterator.Challenge2;
 
 public interface Collection {
 
      Iterator createIterator();
 }
 
-class NotificationCollection implements Collection{
+class NotificationCollection implements Collection {
 
      private static final int MAX_ITEMS=5;
     private int numberOfItems=0;

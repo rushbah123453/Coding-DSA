@@ -1,4 +1,4 @@
-package interviewPrep.designPatterns.behavioral.Iterator;
+package interviewPrep.designPatterns.behavioral.Iterator.Challenge2;
 
 public class Client {
 
