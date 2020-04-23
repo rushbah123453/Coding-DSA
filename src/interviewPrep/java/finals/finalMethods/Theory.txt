@@ -1,0 +1,13 @@
+Basically we make method final when we dont want it to be overidden or change the implementation
+
+public class ClassA {
+    public final void methodA(){
+        System.out.println("in class A");
+    }
+}
+
+public class ClassB extends ClassA{
+   public void methodA(){
+        System.out.println("in class B"); //This will give error
+    }
+}
