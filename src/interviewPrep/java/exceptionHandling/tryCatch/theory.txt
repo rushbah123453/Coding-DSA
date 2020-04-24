@@ -23,3 +23,6 @@ throws:Throws keyword is used for exception handling without try & catch block.
 It specifies the exceptions that a method can throw to the caller and does not handle itself.
 
 Summary: throw is mainly used in catch , and throws is used in method
+
+Mainly throw and throws are used when we dont want to handle the exception in that method
+but we want to handle it in parent method

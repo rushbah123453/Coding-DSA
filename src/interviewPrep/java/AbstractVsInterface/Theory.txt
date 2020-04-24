@@ -16,7 +16,7 @@ Interface:
 
 When to use What ?
 
-1) If you have same line of code that are tio be shared by 2 or more classes
+1) If you have same line of code that are to be shared by 2 or more classes
 - Use Abstract class , define method here and let the class extend the abstract class
 
 2)If you need access specifier other then public in sub class or want to define static non static variable

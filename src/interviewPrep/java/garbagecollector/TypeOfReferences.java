@@ -1,11 +1,11 @@
 
 /*
-* We Have 4 Types of Refrences
-* Strong Reference
-* Weak Reference
-* Soft Reference (type of weak reference)
-* Phantom Refrence (type of weak reference)
-* */
+ * We Have 4 Types of Refrences
+ * Strong Reference
+ * Weak Reference
+ * Soft Reference (type of weak reference)
+ * Phantom Refrence (type of weak reference)
+ * */
 
 
 package interviewPrep.java.garbagecollector;
@@ -17,9 +17,7 @@ import java.util.Set;
 
 public class TypeOfReferences {
 
-    public static void main(String[] args)
-    {
-
+    public static void main(String[] args) {
 
 
         //For Weak Reference
@@ -29,7 +27,6 @@ public class TypeOfReferences {
         Gfg g = new Gfg();
         System.out.println("Weak Reference");
         g.x();
-
 
 
         //Creating weak reference pointing to Strong Reference
@@ -42,14 +39,13 @@ public class TypeOfReferences {
         g = null;
 
 
-
         //Here even if g=null , we will get the reference of g
         //Because GC did not run yet
         g = weakref.get();
         System.out.println("Before Garbage Collector Ran");
         g.x();
 
-        g=null;
+        g = null;
         System.gc();
         System.out.println("After Garbage Collector Ran for weak reference");
 
@@ -57,10 +53,9 @@ public class TypeOfReferences {
 
             g = weakref.get();
             g.x();
-        }catch (Exception e){
-            System.out.println("JVM removed me from memory after GC: "+e.getMessage());
+        } catch (Exception e) {
+            System.out.println("JVM removed me from memory after GC: " + e.getMessage());
         }
-
 
 
         //For Soft Reference
@@ -81,36 +76,33 @@ public class TypeOfReferences {
         s = null;
 
 
-
         //Here even if g=null , we will get the reference of g
         //Because GC did not run yet
         s = softref.get();
         System.out.println("Before Garbage Collector Ran");
         s.x();
 
-        s=null;
+        s = null;
         System.gc();
         System.out.println("After Garbage Collector Ran for Soft reference");
 
-try {
-    s = softref.get();
-    s.x();
-    System.out.println("I will be only removed if JVM is low on memory");
-}catch (Exception e){
-    System.out.println("JVM removed me from memory after GC: "+e.getMessage());
-}
-
+        try {
+            s = softref.get();
+            s.x();
+            System.out.println("I will be only removed if JVM is low on memory");
+        } catch (Exception e) {
+            System.out.println("JVM removed me from memory after GC: " + e.getMessage());
+        }
 
 
     }
 
 
 }
-class Gfg
-{
+
+class Gfg {
     //code
-    public void x()
-    {
+    public void x() {
         System.out.println("I am still in Memory of JVM ");
     }
 }
