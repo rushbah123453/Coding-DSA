@@ -1,3 +1,4 @@
 ArrayList
 
 1)Default capacity of Arraylist and Vector 10
+2)ArrayList is not synchronized
