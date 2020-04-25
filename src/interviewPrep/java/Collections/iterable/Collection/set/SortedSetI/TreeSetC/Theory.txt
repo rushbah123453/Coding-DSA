@@ -1,0 +1,12 @@
+TreeSet
+
+1)Firstly, insertion of null into a TreeSet throws NullPointerException because while insertion of null,
+it gets compared to the existing elements and null cannot be compared to any value.
+
+2)Secondly, if we are depending on default natural sorting order, compulsory the object should be
+homogeneous and comparable otherwise we will get RuntimeException:ClassCastException
+
+3)Every Object/data-type which we add in treeSet should implement comparable
+otherwise  We will get RunTimeException :ClassCastException
+
+4)The implementation in a TreeSet is not synchronized

@@ -1,0 +1,3 @@
+ArrayList
+
+1)Default capacity of Arraylist and Vector 10

@@ -1,0 +1,3 @@
+HashMap
+
+1)HashMap can have 1 null value only located at 0th index
