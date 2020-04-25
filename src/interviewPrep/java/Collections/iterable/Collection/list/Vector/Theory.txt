@@ -5,3 +5,4 @@ Vector
 2)Vector is syncronized
 
 3)Enumeration is fail-fast only for vector as vector is synchronized
+for others it is fail-safe
