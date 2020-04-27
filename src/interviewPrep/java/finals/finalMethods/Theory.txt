@@ -11,3 +11,7 @@ public class ClassB extends ClassA{
         System.out.println("in class B"); //This will give error
     }
 }
+
+
+Where to use final methods ?
+when we dont want the methods to be used in inherited classes

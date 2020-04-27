@@ -1,0 +1,2 @@
+Where to use final class?
+When we dont want the class to be inherited by anyone
