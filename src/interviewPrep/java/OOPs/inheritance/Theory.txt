@@ -7,3 +7,5 @@ We have 5 types of inheritance
 More than 1 superclass for a derived class
 5)Hybrid Inheritance (Not posiible in java with classes as baseclass,Possible with Interface as base class)-
 Mix of  multiple inheritance and Hierarchial
+
+When child class is derived from parent class , variables of parent class becomes private to base class;
