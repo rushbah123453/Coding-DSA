@@ -1,0 +1,5 @@
+Polymorphism is a way in which a singleaction can be performed in different ways
+1)Overloading- Compile time - static binding
+2)Overriding- Run time - Dynamic binding
+
+
