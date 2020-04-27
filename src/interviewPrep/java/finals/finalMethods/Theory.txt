@@ -14,4 +14,4 @@ public class ClassB extends ClassA{
 
 
 Where to use final methods ?
-when we dont want the methods to be used in inherited classes
+when we dont want the methods to be overriden in derivd class i.e we cant change implementation but we can inherit
