@@ -1,0 +1,3 @@
+1)Encapsulation is supported by classes
+2)In encapsulation , member variables are private and access modifiers are public
+3)Encapsulation is used to make class Immutable
