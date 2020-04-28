@@ -2,3 +2,10 @@ ArrayList
 
 1)Default capacity of Arraylist and Vector 10
 2)ArrayList is not synchronized
+
+ArrayList vs LinkedList
+
+1)Insertion and deletion is O(1) in linkedList and O(n) for arrayList
+2)Updating a specific element if we know a index is easy with arrayList
+3)O(n) to search element in arraylist and linkedlist
+4)However if array is sorted then we can use binary search in arraylist O(logn)
