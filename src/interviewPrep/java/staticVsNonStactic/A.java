@@ -22,6 +22,7 @@ public class A {
     public void methodC(){
         System.out.println("I am Not Static method , B ");
         System.out.println("But I can call static methods");
+
         //methodA();
        // methodA();
 

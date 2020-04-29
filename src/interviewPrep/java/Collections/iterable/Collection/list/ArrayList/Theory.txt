@@ -9,3 +9,11 @@ ArrayList vs LinkedList
 2)Updating a specific element if we know a index is easy with arrayList
 3)O(n) to search element in arraylist and linkedlist
 4)However if array is sorted then we can use binary search in arraylist O(logn)
+
+If we want to make arraylist synchronized then ?
+Using Collections.synchronizedList() method
+Using thread-safe variant of ArrayList which is : CopyOnWriteArrayList
+
+Iterator of CopyOnWriteArrayList is fail-safe and doesn't throw ConcurrentModificationException
+even if underlying CopyOnWriteArrayList is modified.
+

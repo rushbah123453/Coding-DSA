@@ -18,7 +18,7 @@ public class FailSafeIterator {
 
         while (iterator.hasNext()){
             System.out.println(iterator.next());
-            concurrentHashMap.put(0,0);
+            concurrentHashMap.put(4,0);
         }
 
 
