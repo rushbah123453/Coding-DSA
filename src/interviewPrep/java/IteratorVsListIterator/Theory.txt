@@ -1,0 +1,17 @@
+Iterator
+
+1)Can traverse elements present in Collection only in the forward direction.
+2)Helps to traverse Map, List and Set.
+3)Indexes cannot be obtained by using Iterator.
+4)Cannot modify or replace elements present in Collection
+5)Cannot add elements and it throws ConcurrentModificationException.
+6)Certain methods of Iterator are next(), remove() and hasNext().
+
+ListIterator
+
+1)Can traverse elements present in Collection both in forward and backward directions.
+2)Can only traverse List and not the other two.
+3)It has methods like nextIndex() and previousIndex() to obtain indexes of elements at any time while traversing List.
+4)We can modify or replace elements with the help of set(E e)
+5)Can easily add elements to a collection at any time.
+6)Certain methods of ListIterator are next(), previous(), hasNext(), hasPrevious(), add(E e).
