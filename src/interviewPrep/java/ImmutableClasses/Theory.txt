@@ -1,0 +1,12 @@
+How to make class immutable ?
+
+1)Remove Setters
+2)Make the member variables as private
+3)mark the class as final , so it cant be extended
+4)making member variable final (optional)
+5)Adding args constructor
+
+String is immutable class in java
+
+Immutable objects are thread safe because being immutable,
+no matter which thread reads their values, they get the right values: they are immune to "memory consistency errors".
