@@ -1,3 +1,4 @@
 HashMap
 
 1)HashMap can have 1 null key only located at 0th index and many null value
+2)Hashmaps capacity is 16 by default
