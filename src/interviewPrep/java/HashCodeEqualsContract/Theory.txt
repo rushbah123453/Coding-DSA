@@ -1,0 +1,14 @@
+1)If two Objects are equal, according to the equals(Object) method,
+then hashCode() method must produce the same Integer on each of the two Objects.
+
+
+2)If two Objects are unequal, according to the equals(Object) method,
+It is not necessary the Integer value produced by hashCode() method on each of
+the two Objects will be distinct. It can be same but producing the distinct Integer on each of the
+two Objects is better for improving the performance of hashing based Collections like HashMap, HashTable…etc.
+
+
+3)internal consistency: the value of hashCode() may only change if a property that is in equals() changes
+
+
+4)If we override equals(), we must also override hashCode().
