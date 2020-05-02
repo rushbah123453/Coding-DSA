@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/duplicate-zeros/
-package contest.leetcode;
+package contest.leetcode.array;
 
 import java.util.Scanner;
 

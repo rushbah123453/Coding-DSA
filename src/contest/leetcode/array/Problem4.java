@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/maximum-product-of-three-numbers/
-package contest.leetcode;
+package contest.leetcode.array;
 import java.util.Arrays;
 import java.util.Scanner;
 

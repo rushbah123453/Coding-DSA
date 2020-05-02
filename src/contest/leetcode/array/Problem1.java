@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/fair-candy-swap/
-package contest.leetcode;
+package contest.leetcode.array;
 
 import java.util.Arrays;
 import java.util.HashSet;

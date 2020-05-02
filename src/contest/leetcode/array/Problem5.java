@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/remove-element/
 //optimize: use 2 pointer
-package contest.leetcode;
+package contest.leetcode.array;
 
 import java.util.ArrayList;
 import java.util.Scanner;
