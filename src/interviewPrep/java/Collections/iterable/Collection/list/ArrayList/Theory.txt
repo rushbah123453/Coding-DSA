@@ -2,6 +2,8 @@ ArrayList
 
 1)Default capacity of Arraylist and Vector 10
 2)ArrayList is not synchronized
+3)If we add element at particular index and elemnt is already present a that index
+Arraylist will rotate elements internally
 
 ArrayList vs LinkedList
 
