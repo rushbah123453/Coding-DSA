@@ -23,3 +23,6 @@ Thread is programatic level
 
 When to use threading concept?
 Wherever we have independent jobs-taks ,use threading concepts
+
+How much threads we can execute at same time?
+It depends on cpu core , if 1 core can run 2 threads at a time then 4 core can execute 8 threads at a time
