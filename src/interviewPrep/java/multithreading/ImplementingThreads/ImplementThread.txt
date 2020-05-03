@@ -11,3 +11,4 @@ when to use what Thread class or runable?
 
 When we extend Thread class, each of our thread creates unique object and associate with it.
 When we implements Runnable, it shares the same object to multiple threads.
+
