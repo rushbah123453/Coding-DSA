@@ -32,7 +32,7 @@ public class AlmostIncreasingNumber {
             if(a[i]<=a[i-1]){
                 count++;
                 if(i>=2){
-                    if (a[i]<=a[i-2])    //a[i]<=a[i-2] && a[i+1]<=a[i-1]  this is the condition
+                    if (a[i]<=a[i-2] && a[i+1]<=a[i-1])    //a[i]<=a[i-2] && a[i+1]<=a[i-1]  this is the condition
                     {
                         return false;
                     }
