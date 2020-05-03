@@ -1,0 +1,16 @@
+In Arrays.sort
+
+1)We can sort in ascending and descending order  Arrays.sort(data, Collections.reverseOrder());
+2)Descending order sorting is only available for object types and not primitive
+
+Syntax:
+Arrays.sort(data, Collections.reverseOrder());
+
+What can i do if i want reverse sorting ?
+
+multiply the Array by -1
+sort
+multiply once again with -1
+Literally spoken:
+
+array = -Arrays.sort(-array)
