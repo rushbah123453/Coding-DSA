@@ -8,4 +8,21 @@ Generally You will say == COMPARES THE REFERENCE OF OBJECT , and as object objec
 But , heres the String literal pool Concept , a will point to 1 in string literal pool and b will also point to the same pool
 So , same reference and hence equal
 
+Integer num1=100;
+Integer num2=100;
+
+num1==num2?true:false
+
+We will assume that == will check the object reference and hence false as num1 and num2 are diff object
+But Java will cache all values from -128 to 127 in same object reference so num1 and num2 are same object
+
+Integer num1=100;
+Integer num2=100;
+num1==num2?true:false
+returns true
+
+Integer num1=200;
+Integer num2=200;
+num1==num2?true:false
+returns false
 
