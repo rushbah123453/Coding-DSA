@@ -12,11 +12,11 @@ public class Problem24 {
             arr[i] = scanner.nextInt();
         }
 
-        System.out.println(validMountainArray(arr));
+       // System.out.println(validMountainArray(arr));
 
 
         //optimized solution
-        System.out.println( secondvalidMountainArray(arr));
+      //  System.out.println( secondvalidMountainArray(arr));
 
 
         //secondoptimized slution
