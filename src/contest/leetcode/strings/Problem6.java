@@ -9,8 +9,6 @@ public class Problem6 {
         String inputString=scanner.next();
         System.out.println(lengthOfLongestSubstring(inputString));
 
-
-
     }
 
     private static int lengthOfLongestSubstring(String inputString) {
