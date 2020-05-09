@@ -26,3 +26,10 @@ When to use Balanced/AVL Tree?
 
 Note:
 All nodes in binary search tree is unique
+
+Operations permformed in binary Search tree:
+
+1)Find Max min and any x element
+2)Insert
+3)Delete
+
