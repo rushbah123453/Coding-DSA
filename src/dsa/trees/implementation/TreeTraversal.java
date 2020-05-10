@@ -101,9 +101,7 @@ public class TreeTraversal {
         Queue<Node> queue=new LinkedList<Node>();
 
         queue.add(node);
-
         while (!queue.isEmpty()){
-
             Node node1=queue.remove();
             System.out.print(node1.data+" ");
             if (node1.left!=null){
@@ -112,9 +110,6 @@ public class TreeTraversal {
             if (node1.right!=null){
                 queue.add(node1.right);
             }
-
-
-
         }
 
 
