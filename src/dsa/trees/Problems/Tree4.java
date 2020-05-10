@@ -14,7 +14,23 @@ public class Tree4 {
         // tree.root.right.right.left=new Node4(8);
         // tree.root.right.right.right=new Node4(9);
         preOrderTraversal(root);
+        System.out.println("");
+        postOrderTraversal(root);
         
+    }
+
+    private static void postOrderTraversal(Node4 node) {
+
+
+        if (node==null)
+            return;
+
+        postOrderTraversal(node.left);
+        postOrderTraversal(node.right);
+        System.out.print(node.data+" ");;
+
+
+
     }
 
     private static void preOrderTraversal(Node4 node) {
