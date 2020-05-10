@@ -16,34 +16,54 @@ public class Tree4 {
         preOrderTraversal(root);
         System.out.println("");
         postOrderTraversal(root);
+        System.out.println("");
+        System.out.println("size of tree "+calculateSize(root));
         
     }
 
-    private static void postOrderTraversal(Node4 node) {
-
+    private static int calculateSize(Node4 node) {
 
         if (node==null)
-            return;
+            return 0;
+        else {
+            int leftSubtreeSize=calculateSize(node.left);
+            int rightSubtreeSizet=calculateSize(node.right);
+            return leftSubtreeSize+rightSubtreeSizet+1;
+        }
 
+    }
+
+    private static void postOrderTraversal(Node4 node) {
+        if (node==null)
+            return;
         postOrderTraversal(node.left);
         postOrderTraversal(node.right);
         System.out.print(node.data+" ");;
-
-
-
     }
 
     private static void preOrderTraversal(Node4 node) {
-
         if (node==null){
             return;
         }
-
         System.out.print(node.data+" ");
         preOrderTraversal(node.left);
         preOrderTraversal(node.right);
+    }
+
+
+
+   static Node4 searchInBST(Node4 node, int key) {
+       if (node==null || node.data==key)
+           return node;
+
+       if (key<node.data){
+         return   searchInBST(node.left,key);
+       }else {
+          return searchInBST(node.right,key);
+       }
 
     }
+
 }
 class Node4 {
     int data;
