@@ -13,7 +13,7 @@ Comaparator
 
 When to use what ?
 
-When we need to sort a object getting from third part , we cannot add interface to that objects class
+When we need to sort a object getting from third party , we cannot add interface to that objects class
 -So we add comparator logic in our class using comparator
 
  Collections.sort(laptops, new Comparator<Laptop>() {

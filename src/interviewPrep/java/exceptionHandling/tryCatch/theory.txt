@@ -5,7 +5,7 @@ These 2 class extends Throwable
 2)Error Class
 
 Exception class is further divided in 2 sub parts:
-1)Checked Exception: IOException,ClassCastException,SQLException etc
+1)Checked Exception: IOException,SQLException etc
 2)UnChecked Exception: RuntimeException,NullPointer Exception etc
 
 1) IOException and RuntimeException extends Exception
