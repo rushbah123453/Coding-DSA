@@ -19,3 +19,30 @@ Using thread-safe variant of ArrayList which is : CopyOnWriteArrayList
 Iterator of CopyOnWriteArrayList is fail-safe and doesn't throw ConcurrentModificationException
 even if underlying CopyOnWriteArrayList is modified.
 
+
+
+
+ArrayList vs Vector
+
+Basically we have 3 difference(Synchronization performance, data-growth)
+
+1)ArrayList are not synchronized , vector is synchronized
+2)Therefore arraylist are more efficient then vector
+3)Arraylist will increase by 1.5 times the size , vector will increase 2times of its size
+
+
+
+
+
+Vector is synchronized by default, and ArrayList is not. Note :
+you can make ArrayList also synchronized by passing arraylist object
+to Collections.synchronizedList() method. Synchronized means : it can be
+used with multiple threads with out any side effect.
+
+ArrayLists grow by 50% of the previous size when space is not sufficient
+for new element, where as Vector will grow by 100% of the previous size
+when there is no space for new incoming element.
+
+
+
+
