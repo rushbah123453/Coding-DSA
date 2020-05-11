@@ -9,9 +9,22 @@ Abstract Class-
 Interface:
 
 1) Interface can only extend interfaces , it cannot implement classes
-2) In Interface all methods are abstract .
+2) In Interface all methods are abstract, and variables are public static final
 3) In Interface , it can have only static final variable
 4) Members are public by default
+
+Why variables in interfaces are public static final ?
+
+interfaces are meant to achieve 100% abstraction , therefore variable are final
+no instantiation , so static
+public because -> interfaces are way in which client access other objects
+
+
+Why variable is static in interface?
+Ok, Lets say we have to access variable of the interface , how can we access?
+We will create a object of interface and access variable? - we cant
+interfaces cant be instantiated , so instead we will make variable static and
+it can be access via interface.variable
 
 
 When to use What ?

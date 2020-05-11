@@ -22,6 +22,7 @@ public class Problem13 {
         }
 
         paragraph= paragraph.replaceAll("\\W+"," ");
+        paragraph=paragraph.replaceAll("^\\s+","");
 
 
         String arr[]=paragraph.split(" ");
