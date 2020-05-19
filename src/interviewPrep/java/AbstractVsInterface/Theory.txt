@@ -26,6 +26,11 @@ We will create a object of interface and access variable? - we cant
 interfaces cant be instantiated , so instead we will make variable static and
 it can be access via interface.variable
 
+Why variable is final in interface?
+final: to make them constants. If 2 classes implement the same interface
+and you give both of them the right to change the value, conflict will occur
+in the current value of the var, which is why only one time initialization is permitted.
+
 
 When to use What ?
 
@@ -40,3 +45,11 @@ When to use What ?
 
 4)If you want to bond a contract that all methods in sub class should be implemented
 -Use interface
+
+Why memebers in interfaces cants be non-public?
+
+Interfaces exist to allow people to access your class without knowing what the concrete implementation is.
+It completely divorices the implementation from the data passing contract.
+
+Therefore, everything in an interface must be public. Non-public members are only useful if
+you have access to the implementation and therefore don't meaningfully contribute to an interface definition.

@@ -4,6 +4,7 @@ ArrayList
 2)ArrayList is not synchronized
 3)If we add element at particular index and elemnt is already present a that index
 Arraylist will rotate elements internally
+4)ArrayList can contains multiple nulls
 
 ArrayList vs LinkedList
 

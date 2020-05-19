@@ -3,9 +3,9 @@
 3)public class name should be same as file name
 
 ______________________________________________________________
-|           │ Class │ Package │ Subclass │ Subclass │ World  |
-|           │       │         │(same pkg)│(diff pkg)│        |
-|───────────┼───────┼─────────┼──────────┼──────────┼────────|
+|           │ Class │ Package │ Subclass │ Subclass │Non-    |
+|           │       │         │(same pkg)│(diff pkg)│Subclass|
+|───────────┼───────┼─────────┼──────────┼──────────┼diffpack|
 |public     │   +   │    +    │    +     │     +    │   +    |
 |───────────┼───────┼─────────┼──────────┼──────────┼────────|
 |protected  │   +   │    +    │    +     │     +    │        |

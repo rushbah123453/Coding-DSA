@@ -10,3 +10,6 @@ homogeneous and comparable otherwise we will get RuntimeException:ClassCastExcep
 otherwise  We will get RunTimeException :ClassCastException
 
 4)The implementation in a TreeSet is not synchronized
+
+
+
