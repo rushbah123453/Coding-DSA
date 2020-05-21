@@ -30,7 +30,5 @@ public class Problem328 {
         even.next=oddHead;
 
         return head;
-
-
     }
 }
