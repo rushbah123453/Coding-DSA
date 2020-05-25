@@ -15,6 +15,9 @@ public class Problem198 {
         }
 
 
+        //   2 1 1 2
+        // 0 2 2 3 4
+
         return kad[i];
 
     }
