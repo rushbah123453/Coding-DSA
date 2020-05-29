@@ -4,7 +4,16 @@ public class Demo {
     public static void main(String[] args) {
 
         int arr[] = {1, 2, 3, 4, 5, 6, 3, 2};
-        System.out.println(searchPivotElement(arr));
+
+        Float a= new Float(123.0);
+        Float b= new Float(123);
+        System.out.println(a.equals(b));
+
+        float af=2.0f;
+        float bf=2;
+        System.out.println(af==bf);
+
+        //System.out.println(searchPivotElement(arr));
     }
 
     private static int searchPivotElement(int[] arr) {

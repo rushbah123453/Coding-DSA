@@ -1,0 +1,16 @@
+A)Java is pass by value or pass by reference ?
+Java is pass by reference for objects and pass by value for primitive
+
+B)What are conditions when finally block wont execute?
+
+1)If the JVM exits while the try or catch code is being executed,
+then the finally block may not execute
+
+2)Likewise, if the thread executing the try or catch code is interrupted
+or killed, the finally block may not execute even though the application as a whole continues
+
+Finally block will always excute even after a return statement in a method
+
+C)IF 3 Java application are running , how many JVM Should be there ?
+-> 3 JVM For 3 seperate applications
+
