@@ -1,0 +1,64 @@
+Requirment : To implement LRU cache Eviction Policy
+
+API Design :
+1)Add the most recently accessed page in cache
+2)Fetch the page from cache if present
+3)Keep track of LRU Size , if capacity is full , remove least recently used page
+
+1)put(key,value)
+2)get(key)
+3)getCapacity  // cache size is suppose 5
+
+
+Implementation : Using Linked-List
+
+1)Lets first add all 5 keys in linked list
+put(1,1)
+put(2,2)
+put(3,3)
+put(4,4)
+put(5,5)
+
+SLL after adding keys and values: 5/5->4/4->3/3->2/2->1/1->null
+
+Now if we make get operation :
+get(1)
+
+Steps Needed:
+1)We will need to traverse whole linked list till we reach 1
+so O(n) tie need to traverse
+2)Then we will need to update the linked list and bring 1 to 1st position
+1/1->5/5->4/4->3/3->2/2->null
+For this we need previous node address as well
+So instead of using SLL , Lets use Doubly Linked list (We will have previos node access as well)
+
+But still we have one problem :
+1)If the value is already present in the linked list ,we might have to traverse till O(n) to check if its present
+Can we reduce the time to O(1)?If value is present can we get direct address?
+
+Lets use HashMap :
+Key will store key and value will have nodes Address
+So if key is present we will get direct address of the node in o(1) time complexity
+
+
+
+So In conclusion Time Complexity is O(1) and Space is O(n)
+
+Fetching already present node:
+1)While putting page , if its present , we can check using hashmap
+2)If present get the node address and bring the node to first
+
+Putting Node if size is full
+1)Adding new page/node , and we found size is full , we need to remove last node
+2)add new page to the head
+
+Queue and Hash is used above
+Queue: This is implemented using doubly linkedlist
+Hash: HashMap is used
+
+
+
+
+
+
+
