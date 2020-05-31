@@ -1,5 +1,6 @@
 package contest.leetcode.tree;
 //https://leetcode.com/problems/same-tree/
+//trees
 public class Problem100 {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
@@ -13,8 +14,6 @@ public class Problem100 {
             return false;
 
         return isSameTree(p.left,q.left)&&isSameTree(p.right,q.right);
-
-
 
     }
 
