@@ -11,8 +11,6 @@ public class Problem572 {
     }
 
     public boolean helper(TreeNode s, TreeNode t){
-
-
         if(s==null && t==null)
             return true;
         if(s==null || t==null)
