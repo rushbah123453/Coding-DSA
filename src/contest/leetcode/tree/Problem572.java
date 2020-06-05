@@ -9,8 +9,7 @@ public class Problem572 {
 
         return helper(s,t) || isSubtree(s.left,t) || isSubtree(s.right,t);
     }
-
-    public boolean helper(TreeNode s, TreeNode t){
+public boolean helper(TreeNode s, TreeNode t){
         if(s==null && t==null)
             return true;
         if(s==null || t==null)
