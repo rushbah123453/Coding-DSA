@@ -10,10 +10,10 @@ public class Problem235 {
         // Value of current node or parent node. ->100% faster
         int parentVal = root.val;
 
-        // Value of p
+
         int pVal = p.val;
 
-        // Value of q;
+
         int qVal = q.val;
 
         if (pVal > parentVal && qVal > parentVal) {
