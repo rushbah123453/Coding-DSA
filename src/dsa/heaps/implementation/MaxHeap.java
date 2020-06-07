@@ -15,6 +15,11 @@ public class MaxHeap {
 
    public void insert(int element){
       Heap[++size]=element;
+      int i=size;
+      while (i>1 && Heap[i/2]<Heap[i]){
+          swap(i,i/2);
+          i=i/2;
+      }
    }
 
 
@@ -93,5 +98,34 @@ maxHeapify(heap,largest);
        size=heapLength;
 
     }
+
+
+    public int extractMax(){
+
+       if (size<1)
+           System.out.println("heap empty");
+
+       int max=Heap[1];
+       Heap[1]=Heap[size];
+       size--;
+      maxHeapify(Heap,1);
+      return max;
+    }
+
+
+    public void increaseKey(int i,int key){
+
+       if (key<Heap[i])   // key should be increased value  as we are increasing key
+           return;
+
+       Heap[i]=key;
+
+       while (i>1 && Heap[i/2]<Heap[i]){
+           swap(i,i/2);
+           i=i/2;
+
+       }
+    }
+
 
 }

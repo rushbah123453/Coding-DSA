@@ -14,10 +14,16 @@ public class Main {
             maxHeap.insert(scanner.nextInt());
         }
         maxHeap.print();
-//maxHeap.buildheap();
-maxHeap.heapSort();
         System.out.println("");
-maxHeap.print();
+        maxHeap.buildheap();
+   //     System.out.println("Max element extracted ="+maxHeap.extractMax());
+//maxHeap.buildheap();
+//maxHeap.heapSort();
+        //System.out.println("");
+//maxHeap.print();
+        System.out.println("Increase Key");
+        maxHeap.increaseKey(2,100);
+        maxHeap.print();
     }
 
 
