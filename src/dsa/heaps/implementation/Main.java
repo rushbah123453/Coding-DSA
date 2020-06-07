@@ -14,7 +14,8 @@ public class Main {
             maxHeap.insert(scanner.nextInt());
         }
         maxHeap.print();
-maxHeap.buildheap();
+//maxHeap.buildheap();
+maxHeap.heapSort();
         System.out.println("");
 maxHeap.print();
     }

@@ -82,4 +82,16 @@ maxHeapify(heap,largest);
        }
     }
 
+    public void heapSort(){
+       buildheap();
+       int heapLength=size;
+       for (int i=size;i>=2;i--){
+            swap(1,i);
+           size--;
+           maxHeapify(Heap,1);
+       }
+       size=heapLength;
+
+    }
+
 }
