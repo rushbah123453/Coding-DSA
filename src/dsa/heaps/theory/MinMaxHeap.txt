@@ -1,0 +1,47 @@
+Min/Max Heap
+
+Min Heap :
+Each root is minimum/smaller then its child
+
+Max Heap:
+Each root is maximum/larger then its child
+
+If Heap is represnted in array format starting from index 1
+-We can find left child, right child and parent index
+
+Example: We have a Max Heap in Tree Format
+
+90->80->70->10->30->50->20
+
+In Array :   1  2   3   4   5   6   7
+            90  80  70  10  30  50  20
+
+
+LC : (2*i)
+RC : (2*i)+1
+Parent : (i/2)
+
+Example:
+
+Left child of 80 (index of 80 is 2): (2*i) = (2*2) = index is 4
+Right Child of 80(index of 80 is 2): (2*i)+1 = (2*2)+1 = index is 5
+Parent of 80 : (i/2) = (2/2) = index is 1
+
+
+
+************ Properties of Complete Binary Tree **************
+
+In Complete Binary Tree(CBT) or Almost Complete Binary Tree(ACBT)
+1)Once a leaf start then all will be leaves
+
+For nodes(n)
+
+1) 1 to floor(n/2) are non leaf
+2) floor(n/2)+1 to n are leaves
+
+
+
+
+
+
+
