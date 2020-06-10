@@ -1,5 +1,5 @@
 package dsa.heaps.implementation;
-//heap
+//heap and heapsort
 public class MaxHeap {
     private int size;
     private int maxSize;
