@@ -1,1 +1,30 @@
-In How many
+Q1)In How many ways can we create object in java?
+1)new : Using new keyword , constructor gets called to initialize state of object
+2)Class.forName().newInstance() :no constructor call,if we know the name of class and public default constructor is present we can use this
+3)clone(): constructor dont get call, creste copy of existing object
+4)object deserialization : no constructor call , it is a way to create object from serialized form
+
+Q2) new vs Class.forName().newInstance()  ?
+1)Using new , java will create object of the type which is assigned at compile time i.e new Class() object of class is created ,
+Also object can be created using any number of args in constructor , i.e can call any constructor on the object you are trying to create
+
+2) using Class.forName().newInstance(), jvm will look upthe classname dynamically and hence time consuming , also using this
+we can only create object using zero-args constructor
+
+Q3) When to use new and when to use Class.forName().newInstance() ?
+
+1) Use new : use new if you know the type of object you need to create at compile time
+2)Use Class.forName().newInstance(): use Class.forName().newInstance() if you dont know the type of object at compile time.
+
+
+Q4) In Class.forName().newInstance() , we already know classname then why not use new ?
+Note: Only reason of using Class.forName().newInstance() is that we dont know class name/type to create object.
+
+Ans: Sometimes , the classes are load in runtime dynamically and same classes are not available during compile time
+So java have provided this feature , so if any class loads at runtime , and if we want to create object of dynamic class
+then use Class.forName().newInstance()
+
+
+
+
+
