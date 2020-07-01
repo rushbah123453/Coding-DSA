@@ -1,0 +1,5 @@
+1)One advantage of Constant.equals(variable) is that you can't have a NullPointerException on the .equals
+"Hello".equals(a); // will never throw a NPE
+a.equals("Hello"); // can throw an NPE.
+
+

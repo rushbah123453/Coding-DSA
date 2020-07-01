@@ -1,0 +1,28 @@
+Throwable is parent class
+These 2 class extends Throwable
+
+1)Exception class
+2)Error Class
+
+Exception class is further divided in 2 sub parts:
+1)Checked Exception: IOException,SQLException etc
+2)UnChecked Exception: RuntimeException,NullPointer Exception etc
+
+1) IOException and RuntimeException extends Exception
+2) VirtualMachineError extends Error
+
+Try catch finally
+
+1 Try can have multiple catch and 1 finally
+1 Try can have either catch or finally
+
+throw: Throw keyword is used to transfer control from try block to catch block.
+
+
+throws:Throws keyword is used for exception handling without try & catch block.
+It specifies the exceptions that a method can throw to the caller and does not handle itself.
+
+Summary: throw is mainly used in catch , and throws is used in method
+
+Mainly throw and throws are used when we dont want to handle the exception in that method
+but we want to handle it in parent method

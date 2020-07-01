@@ -1,0 +1,30 @@
+Polymorphism is a way in which a singleaction can be performed in different ways
+1)Overloading- Compile time - static binding
+2)Overriding- Run time - Dynamic binding
+
+If method is static then runtime-binding will never happen
+
+What will be the output of the below code:
+class Company{
+ static void name(){
+ System.out.println("PrepBytes");
+ }
+}
+class Course extends Company{
+ static void name(){
+ System.out.println("Zenith");
+ }
+}
+public class Test{
+ public static void main(String args[]) {
+ Company c= new Course();
+ c.name();
+ }
+}
+
+Answer: Prepbytes
+
+Overriding in Java simply means that the particular method would be called based on the run time type of
+ the object and not on the compile time type. But in the above case the methods are static which means access
+ to them is always resolved during compile time only using the compile time type information. Accessing them
+    using object references is just an extra liberty given by the designers of Java.

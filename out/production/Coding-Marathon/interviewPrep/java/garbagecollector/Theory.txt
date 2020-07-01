@@ -1,0 +1,25 @@
+An object is said to be eligible for GC(garbage collection) iff it is unreachable
+or i.e it is null
+
+There are generally four different ways to make an object eligible for garbage collection.
+1)Nullifying the reference variable
+2)Re-assigning the reference variable
+3)Object created inside method
+4)Island of Isolation
+
+
+
+How can we call Garbage Collector ?
+
+1)System.gc()
+2)Runtime.getRuntime().gc()
+
+*important*
+There is no guarantee that any one of above two methods will definitely run Garbage Collector.
+
+
+Just before destroying an object, Garbage Collector calls ****finalize()**** method on the object to perform
+cleanup activities. Once finalize() method completes, Garbage Collector destroys that object
+
+
+

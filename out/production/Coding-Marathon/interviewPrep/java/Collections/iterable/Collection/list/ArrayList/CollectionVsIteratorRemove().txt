@@ -1,0 +1,17 @@
+ Ifyou're iterating over a collection and use:
+
+Collection.remove()
+you can get runtime errors (specifically ConcurrentModifcationException) because you're
+changing the state of the object used previously to construct the explicit series of calls necessary to complete the loop.
+
+If you use:
+
+Iterator.remove()
+you tell the runtime that you would like to change the underlying collection AND re-evaluate
+the explicit series of calls necessary to complete the loop.
+
+What makes this operation "Iterator.remove()" stable than the others ?
+
+It means that iterator knows you removed the element so it won't produce a ConcurrentModifcationException.
+
+Suppose You use collections.remove(), iterator wont know about the modification and hence give CME exception

@@ -1,0 +1,13 @@
+Extend :
+
+You can only extend 1 class in java at a time
+
+
+Implement:
+
+You can implement 1 or many interfaces in class
+You can extend 1 or many interfaces
+
+
+Can we extend and implement at same time ?
+Yes you can but you need to write your extends before implements

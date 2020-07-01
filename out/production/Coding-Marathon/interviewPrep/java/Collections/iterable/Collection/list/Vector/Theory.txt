@@ -1,0 +1,8 @@
+Vector
+
+1)Default capacity of Arraylist and Vector 10
+
+2)Vector is syncronized
+
+3)Enumeration is fail-fast only for vector as vector is synchronized
+for others it is fail-safe

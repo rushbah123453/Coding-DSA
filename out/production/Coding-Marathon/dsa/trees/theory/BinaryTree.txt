@@ -1,0 +1,34 @@
+Binary tree:
+
+Binary tree: It can have atmost 2 children , i.e 0,1,2
+
+There are 3 types of Binary Tree:
+
+Strict Binary tree:
+
+1)Every node should have 2 child or no children at all
+
+Full Binary Tree:
+
+1)Each node should have 2 children and all leaf should be at same level
+
+
+Complete Binary Tree:
+
+1)All levels except last has to be completely filled
+2)At the last level node should be as far as left possible
+
+
+Operations:
+Basic and Auxilary:
+
+Basic Operations:
+1)Inserting
+2)Deleting
+3)Search
+4)Traversing tree
+
+Auxilary Operation:
+1)Find Size of tree
+2(Find Height of tree
+

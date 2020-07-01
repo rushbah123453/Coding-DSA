@@ -1,0 +1,12 @@
+We have 3 type of Traversals:
+
+DFS:
+1)Pre-order: ROOT LEFT RIGHT
+2)In-order: LEFT ROOT RIGHT
+3)Post-Order: LEFT RIGHT ROOT
+
+
+
+
+
+BFS : Level

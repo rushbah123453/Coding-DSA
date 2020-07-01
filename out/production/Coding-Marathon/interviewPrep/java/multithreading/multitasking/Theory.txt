@@ -1,0 +1,28 @@
+Main advantage of multitasking: Increase performance and reduce ideal time of cpu
+
+Multitasking in java is divided in 2 types:
+1)Process-Based
+2)Thread-Based
+
+1)Process-Based:
+
+Here each task is seperate individual programme and is OS Dependent
+i.e
+1)Download filefrom chrome
+2)Listem music online
+3)Run application on ide
+
+This all 3 task re seperate individual programme
+
+
+1)Thread-Based:
+Here each Thread is run individually and is part of sameprogramme.
+One thread can or cannot be dependent on another thread
+Thread is programatic level
+
+
+When to use threading concept?
+Wherever we have independent jobs-taks ,use threading concepts
+
+How much threads we can execute at same time?
+It depends on cpu core , if 1 core can run 2 threads at a time then 4 core can execute 8 threads at a time

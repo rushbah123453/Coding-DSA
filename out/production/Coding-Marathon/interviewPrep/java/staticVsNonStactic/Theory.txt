@@ -1,0 +1,7 @@
+1)Static method can access non static method by creating object
+2)Nonstatic method can access static method by method name , object not required
+3)non static to non static and static to static, no object required
+
+Static methods have  fixed memory in heap , so dont required any instance
+Non-Static dont have fixed memory hence requires instance
+

@@ -1,0 +1,44 @@
+A)Java is pass by value or pass by reference ?
+Java is pass by reference for objects and pass by value for primitive
+
+B)What are conditions when finally block wont execute?
+
+1)If the JVM exits while the try or catch code is being executed,
+then the finally block may not execute
+
+2)Likewise, if the thread executing the try or catch code is interrupted
+or killed, the finally block may not execute even though the application as a whole continues
+
+Finally block will always excute even after a return statement in a method
+
+C)IF 3 Java application are running , how many JVM Should be there ?
+-> 3 JVM For 3 seperate applications
+
+D)Why to use this
+List<Integer> list=new ArrayList<>();
+Instead of this
+ArrayList<Integer> list=new ArrayList<>();
+
+->The main reason you'd do this is to decouple your code from a specific implementation of the interface
+
+the rest of your code only knows that data is of type List
+
+Suppose You use ArrayList<Integer> list=new ArrayList<>();
+Now list is child of list , so it will have all features of list as well as additional feature of ArrayList it self
+so the code can be uing some features specific to arraylist which list dont have i.e trimToSize() linked list dont have it
+Now suppose You realize , u need to change ArrayList to LinkedList
+then You cant guraenteed that same code  will work , because linkedlist mght not have some features
+that arraylist have , but linkedlist will have all features of list
+So ,
+this is prefeered :
+List<Integer> list=new ArrayList<>();
+
+
+E)Internal working of list.add(index,value)
+
+
+F)capacity vs size() in ArrayList
+
+
+
+

@@ -1,0 +1,23 @@
+Heap have 3 main types of blocks
+
+1)Young Generation
+
+This have 3 sub blocks :
+
+1)Eden - Objects created stays here (New keyword)
+2)S0
+2)S1
+
+When the space in eden is full , Gc is called and removes all unreachable objects
+The objects which survived gets moved to Survivour 0 and then to Survivour 1
+
+
+2)Old Generation- Tenured
+
+
+3)Permanent Generation- Permanent
+Static variable stays here till jvm lifecycle
+
+Why name id Eden ?
+It came from theory of genesis , it says that first creature was born in garden of eden
+

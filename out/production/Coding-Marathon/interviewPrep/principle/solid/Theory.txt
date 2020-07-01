@@ -1,0 +1,30 @@
+Single Responsibility:
+
+When requirment changes , it implies that we need to undrgo changes in classes
+If the class have more then 1 responsibility that implies more code changes
+So the principle says to seprate out responsibility
+
+Open-Closed Principle- You should be able to extend a class’s behavior, without modifying it.
+
+Open for extension
+This ensures that the class behavior can be extended. As requirements change, we should be able
+to make a class behave in new and different ways, to meet the needs of the new requirements.
+Closed for modification
+The source code of such a class is set in stone, no one is allowed to make changes to the code.
+
+Liskovs-Substitution Principle
+
+
+
+Interface Segregation Principle
+
+Clients should not be forced to implement interfaces they do not use.
+
+
+
+
+Dependency Inversion Principle
+Depend on abstractions, not on concretions.
+
+
+

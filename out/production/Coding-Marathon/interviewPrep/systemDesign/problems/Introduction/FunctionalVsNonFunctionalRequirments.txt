@@ -1,0 +1,22 @@
+Functional Requirements:
+
+1)This are generally provided by client/users
+2)Basic input output
+3)Defined at component level to verify functionality of system
+
+Non-Functional Requirements:
+
+1)This are quality contraints and SLAs
+2)It deals with qualoty attribute of system
+3)Applied to system as a whole
+
+This are some example of Non-Functional Req:
+
+Portability
+Security
+Maintainability
+Reliability
+Scalability
+Performance
+Reusability
+Flexibility

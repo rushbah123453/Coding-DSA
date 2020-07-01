@@ -1,0 +1,19 @@
+Overloading Vs Overriding
+
+Overloading:
+1) It increases the redability of code
+2)Overloading is provided wthin the class
+3)For overloading , parameters must be different
+4)Return type may or may be different , But paraeters should be different
+
+
+
+
+Overriding
+1)It is used to provide specific implementation of the method that is already provided by super class
+2)Overrinding occurs in two classes that have IS-A relationship
+3)Parameter must be same in overriding
+4)Method overriding is the example of run time polymorphism.
+5)Return type must be same or covariant in method overriding.
+ -When we override a parent class method, the name, argument types and return type
+  of the overriding method in child class has to be exactly same as that of parent class method.

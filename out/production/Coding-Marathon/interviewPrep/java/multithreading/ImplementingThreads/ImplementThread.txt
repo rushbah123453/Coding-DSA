@@ -1,0 +1,14 @@
+There are2 ways to implement threads in java
+
+1)Extending Thread class
+2)Implementing runnable interface
+
+
+when to use what Thread class or runable?
+
+1)If you are already extending 1 class , you cannot extend thread class as multiple inheritance is not allowed in java
+-So use Runnable (Interface), using runnable you can still extend 1 class
+
+When we extend Thread class, each of our thread creates unique object and associate with it.
+When we implements Runnable, it shares the same object to multiple threads.
+
