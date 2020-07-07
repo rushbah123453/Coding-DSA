@@ -9,11 +9,10 @@ public class Problem1441 {
         List<String> list=new ArrayList<>();
         int element=1;
         for(int i=0;i<target.length;){
+            list.add("Push");
             if(target[i]==element){
-                list.add("Push");
                 i++;
             }else{
-                list.add("Push");
                 list.add("Pop");
             }
             element++;
