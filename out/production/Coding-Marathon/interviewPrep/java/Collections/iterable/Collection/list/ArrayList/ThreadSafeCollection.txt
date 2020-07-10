@@ -2,7 +2,7 @@ These All are Thread Safe :
 
 1) ConcurrentHashMap : Lock on write
 
-2) SynchronizedHashMap: Lock on read and write
+2) SynchronizedHashMap : Lock on read and write
 
 3) Vector
 

@@ -18,7 +18,7 @@ TreeMap
 1)Cannot store null key but can have many null values (Because while inserting key ,
 it compares key with every other key to maintain insertion order)
 2)Store Unique elements , no duplication allowed
-3)Order of insertion is ascending order
+3)Order of insertion is ascending order.
 
 ConcurrentHashMap
 

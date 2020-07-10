@@ -38,8 +38,6 @@ public class Problem59 {
             }
             colBegin++;
 
-
-
         }
 
         return res;
