@@ -5,7 +5,7 @@ public class PrefixTable {
 
 
      //  int pi[]= computePrefixTable("aabaabaaa");
-        int pi[]= gfg("abcaabcbbabc");
+        int pi[]= gfg("abcabaaeecabce");
         for (int x:pi){
             System.out.print(x);
         }
