@@ -15,9 +15,6 @@ public class knapsackTopDown {
 
 
 
-    private static void abc() {
-    }
-
 
     public static int  knapsackTopDown(int[] w, int[] v, int W, int n){
 
