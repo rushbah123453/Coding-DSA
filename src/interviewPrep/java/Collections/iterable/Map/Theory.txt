@@ -13,6 +13,7 @@ LinkedHashMap
 2)Store Unique elements , no duplication allowed
 3)Order of insertion is  maintained    *Important*
 
+
 TreeMap
 
 1)Cannot store null key but can have many null values (Because while inserting key ,
