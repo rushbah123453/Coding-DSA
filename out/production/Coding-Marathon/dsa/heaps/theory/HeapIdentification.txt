@@ -1,0 +1,22 @@
+How to identify heap problems?
+-Check in question if it mentions kth smallest or kth largest
+
+If it says
+kth smallest-> Use Max Heap
+kth Largest->  Use Min Heap
+
+To find kth smallest and largest , what can we do ?
+We can sort and find kth element but time complexity is (nlogn)
+
+Can we reduce the time complexity from (nlogn) ?
+Yes,Using Heap-> Time complexity -> (nlogk)
+
+How the time complexity becomes (nlogk) ?
+because we maintain a heap of k size only and sort k elements only instead of n elements
+
+Example:a[]= 7,10,4,3,20,15 k=3 , find 3th smallest element
+Using Sorting Algo: 3 4 7 10 15 20 (nlogn)
+
+maintain a maxHeap of k size , keep on adding elemets to it
+if size becomes greater then k , then pop()
+at the end the top most element is kth smallest
