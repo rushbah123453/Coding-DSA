@@ -1,4 +1,4 @@
-package algorithms.dp.knapsack;
+package algorithms.dp.knapsack.BoundedKnapsack;
 
 public class CountnumberOfSubsetWithGivenDiff {
 

@@ -1,4 +1,4 @@
-package algorithms.dp.knapsack;
+package algorithms.dp.knapsack.BoundedKnapsack;
 
 public class EqualSumPartition {
     public static void main(String[] args) {
