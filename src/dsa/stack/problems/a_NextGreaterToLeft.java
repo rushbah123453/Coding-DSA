@@ -2,7 +2,7 @@ package dsa.stack.problems;
 
 import java.util.Stack;
 
-public class NextGreaterToLeft {
+public class a_NextGreaterToLeft {
     public static void main(String[] args) {
         int a[]={1,3,10,2,7,4,8};
         int res[]=getNextGreatestToLeft(a);

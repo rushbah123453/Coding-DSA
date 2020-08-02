@@ -5,7 +5,7 @@ package dsa.stack.problems;
 
 import java.util.Stack;
 
-public class NextGreaterToRight {
+public class b_NextGreaterToRight {
 
 
     public static void main(String[] args) {
