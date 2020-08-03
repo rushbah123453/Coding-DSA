@@ -2,17 +2,31 @@ package dsa.stack.problems;
 
 import java.util.Stack;
 
-public class f_MaximumAreaOfHistogram {
-    public static void main(String[] args) {
-        int a[]={6,2,5,4,5,1,6};
-        int res[]=getMaxAreaOfHistogram(a);
-        for (int x:res){
-            System.out.print(x+" ");
-        }
+public class g_MaxAreaOfRectangle {
 
+    public static void main(String[] args) {
+        int m[][]={{0,1,0,0},{0,1,1,1},{0,1,1,1},{0,1,1,1}};
+        int maxArea=getMaxAreaOfRectangle(m);
+        System.out.println("Max Areaof Reactangle is = "+maxArea);
     }
 
-    private static int[] getMaxAreaOfHistogram(int[] a) {
+    private static int getMaxAreaOfRectangle(int[][] m) {
+
+        int v[]=new int[m[0].length];
+        int max=getMaxAreaOfHistogram(m[0]);
+        for (int i=1;i<m.length;i++){
+            for (int j=0;j<m[0].length;j++){
+                if (m[i][j]!=0){
+                    m[i][j]+=m[i-1][j];
+                }
+            }
+            max=Math.max(max,getMaxAreaOfHistogram(m[i]));
+        }
+        return max;
+    }
+
+
+    private static int getMaxAreaOfHistogram(int[] a) {
         int nsr[]=findNextSmallestElementToRight(a);
         int nsl[]=findNextSmallestToLeft(a);
         int res[]=new int[a.length];
@@ -22,8 +36,8 @@ public class f_MaximumAreaOfHistogram {
             max=Math.max(max,res[i]);
         }
 
-        System.out.println("Maximum Area: " +max);
-        return res;
+    //    System.out.println("Maximum Area: " +max);
+        return max;
 
     }
     private static int[] findNextSmallestElementToRight(int[] a) {
@@ -31,7 +45,7 @@ public class f_MaximumAreaOfHistogram {
         int nsr[]=new int[a.length];
         for (int i=a.length-1;i>=0;i--){
             int currVal=a[i];
-            while (!stack.isEmpty() && stack.peek().value>a[i]){
+            while (!stack.isEmpty() && stack.peek().value>=a[i]){
                 stack.pop();
             }
 
@@ -51,7 +65,7 @@ public class f_MaximumAreaOfHistogram {
         int nsl[]=new int[a.length];
         for(int i=0;i<a.length;i++){
             int currVal=a[i];
-            while (!stack.isEmpty() && stack.peek().value>a[i]){
+            while (!stack.isEmpty() && stack.peek().value>=a[i]){
                 stack.pop();
             }
 
@@ -65,12 +79,5 @@ public class f_MaximumAreaOfHistogram {
 
         return nsl;
     }
-}
-class Stocks{
-    public Integer value;
-    public Integer index;
-    Stocks(Integer value,Integer index){
-        this.value=value;
-        this.index=index;
-    }
+
 }
