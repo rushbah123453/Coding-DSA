@@ -5,7 +5,7 @@ import java.util.Stack;
 public class c_NextSmallerToRight {
 
     public static void main(String[] args) {
-        int a[]={1,6,2,7,3};
+        int a[]={6,2,5,4,5,1,6};
         int ans[]=findNextSmallestElement(a);
         for (int x:ans){
             System.out.print(x+" ");
@@ -23,7 +23,7 @@ public class c_NextSmallerToRight {
             if (stack.isEmpty()){
                 a[i]=-1;
             }else {
-                a[i]=stack.pop();
+                a[i]=stack.peek();
             }
             stack.push(currVal);
 
