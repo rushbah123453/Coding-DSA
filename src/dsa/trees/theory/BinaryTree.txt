@@ -4,13 +4,13 @@ Binary tree: It can have atmost 2 children , i.e 0,1,2
 
 There are 3 types of Binary Tree:
 
-Strict Binary tree:
+Strict/Perfect Binary tree:
 
 1)Every node should have 2 child or no children at all
 
 Full Binary Tree:
 
-1)Each node should have 2 children and all leaf should be at same level
+1)Each node should have 2 children and leaf can be at any level
 
 
 Complete Binary Tree:
