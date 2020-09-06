@@ -1,9 +1,6 @@
 package companyCodingQuestion.CompanyPrep.Amazon;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class WordBreak {
     static Set<String> set=new HashSet<>();
@@ -39,4 +36,39 @@ public class WordBreak {
           set.add(x);  
         }
     }
+
+
+
+    //method2: optimized dp approach
+    public boolean wordBreak(String s, List<String> wordDict) {
+        //if(s.length()==0)return true;
+
+        boolean dp[]=new boolean[s.length()+1];
+        dp[0]=true;
+
+        // l e e t c o d e
+        //""
+        //l
+        //le
+        //lee
+        //leet true
+        //leetc
+        //leetco
+        //leetcod
+        //leetcode true
+
+
+        for(int i=0;i<=s.length();i++){
+            for(int j=0;j<i;j++){
+
+                if(dp[j] && wordDict.contains(s.substring(j,i))){
+                    dp[i]=true;
+                    break;
+                }
+
+            }
+        }
+        return dp[s.length()];
+    }
+
 }
