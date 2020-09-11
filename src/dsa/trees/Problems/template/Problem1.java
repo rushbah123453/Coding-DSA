@@ -2,8 +2,6 @@ package dsa.trees.Problems.template;
 
 //https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 
-import dsa.trees.Problems.Tree1;
-
 
 import java.util.LinkedList;
 import java.util.Queue;
