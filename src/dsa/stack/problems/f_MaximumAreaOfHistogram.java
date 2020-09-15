@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class f_MaximumAreaOfHistogram {
     public static void main(String[] args) {
-        int a[]={6,2,5,4,5,1,6};
+        int a[]={1,5,2,3};
         int res[]=getMaxAreaOfHistogram(a);
         for (int x:res){
             System.out.print(x+" ");
