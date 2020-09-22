@@ -6,7 +6,7 @@ Abort or commit
 
 Consistency:
  is used to make sure that the data which is been modified in the database is not corrupted
-For example, in an application that transfers funds from one account to another, the consistency
+For example,     in an application that transfers funds from one account to another, the consistency
 property ensures that the total value of funds in both the accounts is the same at the start and end of each transaction.
 
 Isolation:  is used to ensure that multiple transactions that occur concurrently
