@@ -10,7 +10,7 @@ public class ArrayListDemo {
         arrayList.size();
 
         List<Integer> intList=new ArrayList<>();
-        intList.add(0,1);
+        intList.add(0,1); // add(index, element)
         intList.add(1,2);
         intList.add(0,3);
         System.out.println(intList);
