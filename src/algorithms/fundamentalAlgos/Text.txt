@@ -1,5 +1,12 @@
-1)DFS
-2)BFS
+A)DFS
+1) Uses recursion
+2) Use visited flag to avoid infinite loop
+3) When you want to check if path exists from A to B, DFS could evaluate longer even if path might be
+the second children. In that case BFS would be better.
+
+B)BFS
+1) Uses queue
+
 3)Matching Parenthesis Problem
 4)Using HashMap
 5)2Pointer Manipulation
