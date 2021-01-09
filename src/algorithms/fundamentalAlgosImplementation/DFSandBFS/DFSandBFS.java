@@ -1,4 +1,4 @@
-package algorithms.fundamentalAlgosImplementation;
+package algorithms.fundamentalAlgosImplementation.DFSandBFS;
 
 import java.util.HashSet;
 import java.util.LinkedList;
