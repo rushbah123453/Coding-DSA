@@ -2,7 +2,6 @@ package interviewPrep.designPatterns.creational.factoryPattern.example2;
 
 public class FactoryPatternDemo {
 
-
     public static void main(String[] args) {
         AnimalFactory animalFactory=new AnimalFactory();
 
