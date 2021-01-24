@@ -1,0 +1,10 @@
+EX-OR Technique
+
+Ex-Or Ing is a technique to solve problems like find duplicate in array or find unique value
+in array or permutation sum in codility (Lession 4: Counting Elements - Perm Check)
+https://app.codility.com/demo/results/trainingVUTWTE-F6T/
+
+When you ex-or number with itself you get value as 0
+When you ex-or number with some different number you get a non zero value
+
+Think about this technique if you get above problems in coding test
