@@ -7,13 +7,31 @@ the second children. In that case BFS would be better.
 B)BFS
 1) Uses queue
 
-3)Matching Parenthesis Problem
-4)Using HashMap
-5)2Pointer Manipulation
-6)Reverse LinkedList
-7)Sorting(Merge,Quick,HeapSort)
-8)Recurssion
+C)Matching Parenthesis Problem
+D)Using HashMap
+E)2Pointer Manipulation
+F)Reverse LinkedList
+G)Sorting(Merge,Quick,HeapSort)
+
+H)Recurssion
+1) Why Stack Overflow error occurs in recursion?
+If the base case is not reached or not defined, then the stack overflow problem may arise.
+2)A function fun is called direct recursive if it calls the same function fun.
+A function fun is called indirect recursive if it calls another function say
+fun_new and fun_new calls fun directly or indirectly
+3) What is difference between tailed and non-tailed recursion?
+A recursive function is tail recursive when recursive call is the last thing executed by
+the function
+4) How memory is allocated to different function calls in recursion?
+When any function is called from main(), the memory is allocated to it on the stack.
+ A recursive function calls itself, the memory for a called function is allocated on top of memory
+ allocated to calling function and different copy of local variables is created for each function call.
+ When the base case is reached, the function returns its value to the function by whom
+ it is called and memory is de-allocated and the process continues
+
 9)Custom DSA
+https://www.geeksforgeeks.org/create-customized-data-structure-evaluates-functions-o1/
+
 10)Searching Algo(Binary Search)
 11)BackTracking
 12)Greedy
