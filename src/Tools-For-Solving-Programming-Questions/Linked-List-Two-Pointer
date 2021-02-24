@@ -1,0 +1,6 @@
+For problems where it is stated to solve in one pass, this two pointer technique can be used
+One will be a fast pointer and other will be a slow pointer.
+The fast pointer will always be ahead of the slow pointer.
+
+Eg problem where this should be used: Remove Nth Node From End of List
+(link: https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
