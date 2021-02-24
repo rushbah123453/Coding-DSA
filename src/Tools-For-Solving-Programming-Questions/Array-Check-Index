@@ -1,0 +1,5 @@
+For array questions, check if in the question it is mentioned that the elements value
+will be within one and length of the array (i.e. 1 <= element <= array.length).
+
+If that is the case then problems like find duplicates or similar problems can be done
+in reduced time complexity
