@@ -2,7 +2,7 @@ package dsa.linkedList;
 
 import java.util.Scanner;
 
-public class Problem4 {
+public class AddElementInASortedLinkedList {
     static Node4 head = null;
 
     public static void main(String[] args) {
@@ -23,26 +23,20 @@ public class Problem4 {
         Node4 temp = head;
         Node4 newNode = new Node4(x);
 
-        while (temp != null) {
-            if (temp.data < x && temp.next != null && temp.next.data > x) {
-                newNode.next = temp.next;
-                temp.next = newNode;
-                break;
-            } else {
-                if (temp.data >= x && (temp.next == null || temp.next.data >= x)) {
-                    newNode.next = head;
-                    head = newNode;
-                    break;
-                } else if (temp.data < x && temp.next == null) {
-                    temp.next = newNode;
-                    break;
-                } else if (temp.next.next == null) {
-                    temp.next.next = newNode;
-                    break;
-                } else {
-                    temp = temp.next;
-                }
+        // this if condition for edge case, when the no. of elements is either 0 or 1
+        if(head == null || head.data > x) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+
+            // here we are checking if the next value i.e. temp.next.data and not temp.data is less than new value
+            // because we want to be at the element whose next value should be this new value to be inserted.
+            // Because this is a singly linked list you cannot go back but only forward
+            while (temp.next != null && temp.next.data < x) {
+                temp = temp.next;
             }
+            newNode.next = temp.next;
+            temp.next = newNode;
         }
         printList();
     }
@@ -79,4 +73,3 @@ class Node4 {
         this.next = null;
     }
 }
-
