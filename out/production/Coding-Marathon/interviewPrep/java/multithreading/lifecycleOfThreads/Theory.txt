@@ -1,6 +1,6 @@
 Mainly Threads have 5 states
 
-1)New :When we insantiated Thread object Thread t=new Thread(new class);
+1)New :When we instantiated Thread object Thread t=new Thread(new class);
 2)Runnable : When we invocate start() i.e t.start();Here Thread is not running as it is not selected by scheduler
 3)Running : Here thread is selected by scheduler and is in running state
 4)Non-Runnable: sleep() wait() , thread is alive but not in running state

@@ -16,6 +16,7 @@ public class ClosestPair {
         return new int[] {nums[firstIndex], nums[secondIndex]};
     }
     public static void main(String[] args) {
+        //Sorted array
         int[] nums = {1, 3, 4, 7, 10};
         int target = 15;
         System.out.println("Closest pair: " + Arrays.toString(getClosestPair(nums, target)));
