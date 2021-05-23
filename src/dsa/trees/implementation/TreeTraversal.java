@@ -71,16 +71,13 @@ public class TreeTraversal {
 
     private static int heightOfTree(Node node) {
         if (node == null)
+            // why returning negative -1.
+            // Think about height from leaf node -> Math(-1, -1) + 1 = 0, which is correct
             return -1;
-        else {
-            int leftHeight = heightOfTree(node.left);
-            int rightHeight = heightOfTree(node.right);
-            if (leftHeight > rightHeight)
-                return leftHeight + 1;
-            else
-                return rightHeight + 1;
-        }
-    }
+        int leftHeight = heightOfTree(node.left);
+        int rightHeight = heightOfTree(node.right);
+        return Math.max(leftHeight, rightHeight) + 1;
+}
 
 
     private static int sizeOfTree(Node node) {
@@ -93,6 +90,7 @@ public class TreeTraversal {
         }
     }
 
+    // print elements of a level from left to right
     private static void levelOrderTraversal(Node node){
 
         if (node==null)

@@ -1,4 +1,4 @@
 package dsa.trees.Problems.conversion;
 
-public class BST2ScrewedTree {
+public class BST2SkewedTree {
 }
