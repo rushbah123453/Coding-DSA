@@ -50,6 +50,18 @@ When to use What ?
 Use abstract classes and inheritance if you can make the statement “A is a B”.
 Use interfaces if you can make the statement “A is capable of [doing] as”
 
+Why cannot we instantiate abstract class?
+-- Simple answer: Because the owner/author of code dont want to, or else why do he mark it as abstract
+Explanation: An abstract class is not complete!
+The author marked it abstract to tell you that some implementation is missing in the code.
+The author has done some of the work, but you must fill in some bits yourself to get it working.
+The abstract keyword ensures that no one would accidentally initiate this incomplete class.
+
+Example: Think of repairing a car.
+Someone has removed the brake pads and is going to replace them in the next day.
+Now, to prevent someone accidentally driving this car(which has no brakes installed),
+the mechanic installs a lock on the steering wheel. It's a fail-safe measure.
+
 Why memebers in interfaces cants be non-public?
 
 Interfaces exist to allow people to access your class without knowing what the concrete implementation is.
