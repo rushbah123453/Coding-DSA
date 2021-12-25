@@ -46,6 +46,10 @@ When to use What ?
 4)If you want to bond a contract that all methods in sub class should be implemented
 -Use interface
 
+****  IMPORTANT  *****
+Use abstract classes and inheritance if you can make the statement “A is a B”.
+Use interfaces if you can make the statement “A is capable of [doing] as”
+
 Why memebers in interfaces cants be non-public?
 
 Interfaces exist to allow people to access your class without knowing what the concrete implementation is.
