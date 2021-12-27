@@ -18,8 +18,8 @@ public class ClosestPairFor2Arrays {
 
     public static void main(String[] args) {
         //Sorted Arrays
-        int[] nums1 = {1, 4, 5, 7};
-        int[] nums2 = {10, 20, 30, 40};
+        int[] nums1 = {1, 4, 5, 7, 50};
+        int[] nums2 = {10, 20, 30, 40, 50};
         int target = 50;
         System.out.println(Arrays.toString(getClosestPair(nums1, nums2, target)));
 

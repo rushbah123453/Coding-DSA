@@ -1,0 +1,16 @@
+1) How to create a singleTon class
+2) Autowired - Dependency injection. How does spring achieve initialization before autowired class is created
+- ans is related to singleton
+3) Pagination
+4) If you update a list while iterating does it throw exception ? - Ans CME
+5) Two types of exceptions - Checked and Unchecked and their difference
+6) Is CME runtime exception
+7) How to handle exception and throw exception
+8) Does spring boot has better way to throw exception than simple try/catch/throws
+9) How to create your own custom exceptions and throw to ui when say there is no data
+10) Advantage of cosmos db over free no sql db like mongodb. Mentioned request units
+11) Kafka - Why partition. disadvantage of partition. Advantage of kafka, consumer groups.
+What mechanism to perform when event gets poisened say if partition2 is corrupted
+12) Hashmap - how internally it works, concept of collision
+13) In java 8 - to search element in linked list, it converts linked list to different
+data structure to reduce time complexity
