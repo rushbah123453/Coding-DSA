@@ -14,6 +14,8 @@ Interface:
 4) Members are public by default
 
 Why variables in interfaces are public static final ?
+The final modifier ensures the value assigned to the interface variable is a true constant
+that cannot be re-assigned. In other words, interfaces can declare only constants, not instance variables.
 
 interfaces are meant to achieve 100% abstraction , therefore variable are final
 no instantiation , so static
@@ -69,3 +71,10 @@ It completely divorices the implementation from the data passing contract.
 
 Therefore, everything in an interface must be public. Non-public members are only useful if
 you have access to the implementation and therefore don't meaningfully contribute to an interface definition.
+
+
+Final verdict:
+
+1. Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods. 
+Abstract class and interface both can't be instantiated.
+
