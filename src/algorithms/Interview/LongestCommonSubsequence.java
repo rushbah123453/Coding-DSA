@@ -1,4 +1,4 @@
-package algorithms.dp.Interview;
+package algorithms.Interview;
 
 public class LongestCommonSubsequence {
 

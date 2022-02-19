@@ -1,16 +1,48 @@
 package algorithms.dp.knapsack.BoundedKnapsack;
 
 public class CountnumberOfSubsetWithGivenDiff {
-
+static int count;
     public static void main(String[] args) {
-        int v[]={1,2,3,4};
+        count=0;
+        int v[]={1,1,1,1,1,1};
         int n=v.length;
-        int diff=1;
+        int diff=3;
+        System.out.println("Recurssive Approach");
 
+        if((getSum(v)+diff)%2!=0) System.out.println("ans="+0);
+   else
+            System.out.println("ans="+recurssive(v,n,(getSum(v)+diff)/2));
+       // System.out.println("res= "+res);
+       // System.out.println("ans="+ans);
         System.out.println("");
         System.out.print("number of subset ");
         System.out.print(countNumberOfSubsetWithDiff(v,n,diff));
         System.out.println("");
+    }
+
+    private static int getSum(int[] v) {
+        int sum=0;
+        for (int x:v)
+            sum+=x;
+        return sum;
+    }
+
+
+    private static int recurssive(int[] v,int n,int sum)
+    {
+
+        if (sum==0) {
+            // System.out.println("sum = "+sum);
+            return 1;
+            // return;
+        }
+        if(n<=0)return 0;
+        if (v[n-1]>sum)
+            return recurssive(v,n-1,sum);
+        else{
+            System.out.println("n-1= "+(n-1)+" sum= "+sum);
+            return     recurssive(v,n-1,sum)+recurssive(v,n-1,sum-v[n-1]);
+        }
     }
 
     private static int countNumberOfSubsetWithDiff(int[] v, int n, int diff) {

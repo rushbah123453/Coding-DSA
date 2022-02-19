@@ -1,4 +1,4 @@
-package algorithms.dp.Interview;
+package algorithms.Interview;
 //https://www.geeksforgeeks.org/find-the-longest-path-in-a-matrix-with-given-constraints/
 public class LongestPathInMatrix {
 

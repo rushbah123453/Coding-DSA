@@ -1,4 +1,4 @@
-package algorithms.dp.Interview;
+package algorithms.Interview;
 
 public class MinimumAbsDiffPartition {
     public static void main(String[] args) {
