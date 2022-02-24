@@ -18,6 +18,22 @@ public class BinarySearchTree {
         binarySearchTree.add(46);
         binarySearchTree.add(84);
         binarySearchTree.add(90);
+        /* Nodes are always added at the leaf
+        * left value is less than the root and right is greater than root
+        *           50
+                  /    \
+                25       75
+               /  \      / \
+             15    30   70  85
+               \     \      /  \
+                23    40   84  90
+                       \
+                       46
+        *
+        * */
+
+        // Preorder: Root will be printed first then left and right
+        // so print root, go left till null and then print right
         System.out.println("PreOrder: ");
         binarySearchTree.preOrder(root);
         System.out.println("");
@@ -27,12 +43,13 @@ public class BinarySearchTree {
         search(1003);
     }
 
-
-
     private static void add(int key) {
+        // root.data value will always be same which is equal to 50
         root = add(root, key);
     }
 
+    // We overload add function to traverse through tree by passing root of tree in node.
+    // Similar approach in search function
     private static Nodes add(Nodes node, int key) {
         if (node == null) {
             node = new Nodes(key);

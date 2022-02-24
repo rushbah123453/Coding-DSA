@@ -54,6 +54,7 @@ public class knapsackRecurssive {
         for (int i=0;i<n+1;i++){
             for (int j=0;j<w+1;j++) {
                 if(i==0||j==0){
+                    // In java array value is initailized to 0, so not required... maybe for other language it might be required
                     dp[i][j]=0;
 
                 }
