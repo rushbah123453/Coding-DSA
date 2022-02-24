@@ -4,9 +4,6 @@
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
 
-import java.util.Arrays;
-import java.util.Collections;
-
 class Solution {
     public int solution(int[] A) {
         // write your code in Java SE 8
@@ -27,8 +24,8 @@ class Solution {
 
 public class CodilityTest {
     public static void main(String[] args) {
-        Solution s = new Solution();
+        Solution2 s = new Solution2();
         int[] nums = {1, -2, -3, 5, -1};
-        System.out.println("Res: " + s.solution(nums));
+//        System.out.println("Res: " + s.solution(nums));
     }
 }

@@ -20,6 +20,10 @@ public class Test {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3};
         System.out.println("Result: " + subsets(nums).toString());
+
+        String s1 = "abcd##de";
+        List<String> l = Arrays.asList(s1);
+        System.out.println("printing list:" + l.get(0));
     }
 
 }

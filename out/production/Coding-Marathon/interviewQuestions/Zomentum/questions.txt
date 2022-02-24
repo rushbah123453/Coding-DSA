@@ -1,0 +1,5 @@
+1) What is Database Indexes ?
+2) Adv and disadv of databases indexes ?
+3) What data structure is used to store database indexes ?
+4) What is heap data structure ?
+5) Time complexity of heap insertion ?
