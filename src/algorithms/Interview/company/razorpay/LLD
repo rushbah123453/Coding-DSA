@@ -1,0 +1,48 @@
+Design and implement a rating service
+
+A survey will have multiple questions.
+A question can have multiple options and options have weights assigned.
+The average of answer's weight is the rating of the survey, and average of all rating is the overall survey rating.
+
+Following functionality should be available
+Admin :
+Create a survey
+Create questions and answers for surveys
+Define the weightage for each answer
+Survey response should be rated, overall rating should be calculated, and shown to admin
+Admin should be able to see the average rating of each question
+
+User
+User should be able to respond to the provided survey,
+User should not be allowed to re-submit a survey
+
+
+Sample Survey
+1. How well did you do this round?
+		Very Poor - 1
+		Poor - 2
+		Average - 3
+		Good - 4
+		Very  Good -  5
+2. How difficult is the question?
+		Easy - 1
+		Ok - 3
+		Difficult - 4
+		Very Difficult - 5
+
+User1 Response
+1. Poor
+2. Difficult
+
+Survey Rating = (2+4)/2 = 3
+
+User2 Response
+1. Good
+2. OK
+
+Survey Rating = (4+3)/2 = 3.5
+
+Overall Survey Rating = (3+3.5)/2 = 3.25
+
+Q1 Rating = (2+4)/2 = 3
+Q2 Rating = (4+3)2 = 3.5

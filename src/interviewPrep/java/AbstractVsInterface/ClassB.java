@@ -6,6 +6,8 @@ public class ClassB extends ClassA{
 
     }
 
+
+
     //You dont need to necessary implement methodB
     //Only abstract methods need to be implemented
 }

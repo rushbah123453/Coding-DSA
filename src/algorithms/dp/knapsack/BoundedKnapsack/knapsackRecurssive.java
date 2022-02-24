@@ -1,6 +1,8 @@
 package algorithms.dp.knapsack.BoundedKnapsack;
 
 public class knapsackRecurssive {
+
+     static int t[][];
     public static void main(String[] args) {
         int val[]={1,4,3,4,5};
         int wt[]={10,20,30,40,50};
@@ -11,6 +13,16 @@ public class knapsackRecurssive {
 
         int res2= knapDP(val,wt,w,n);
         System.out.println(res2);
+
+        t=new int[n+1][w+1];
+        for (int i=0;i<t.length;i++){
+            for(int j=0;j<t[0].length;j++)
+            {
+                t[i][j]=-1;
+            }
+        }
+        int res3=knapsackMemoization(val,wt,w,n);
+        System.out.println(res3);
     }
 
     private static int knapsackRecurssive(int[] val, int[] wt, int w, int n) {
@@ -18,6 +30,24 @@ public class knapsackRecurssive {
         if(wt[n-1]>w)return knapsackRecurssive(val,wt,w,n-1);
         else return Math.max(val[n-1]+knapsackRecurssive(val,wt,w-wt[n-1],n-1),knapsackRecurssive(val,wt,w,n-1));
     }
+
+
+    private static int knapsackMemoization(int[] val, int[] wt, int w, int n) {
+        if(w==0||n==0)return 0;
+       if(t[n][w]!=-1)return t[n][w];
+        if(wt[n-1]>w)
+        {
+            t[n][w]=knapsackMemoization(val,wt,w,n-1);
+            return t[n][w];
+        }
+        else {
+            t[n][w]= Math.max(val[n-1]+knapsackMemoization(val,wt,w-wt[n-1],n-1),knapsackMemoization(val,wt,w,n-1));
+            return t[n][w];
+        }
+    }
+
+
+
 
     private static int knapDP(int[] val, int[] wt, int w, int n){
         int dp[][]=new int[n+1][w+1];

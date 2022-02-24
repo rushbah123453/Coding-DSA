@@ -35,7 +35,7 @@ public class Driver {
         Collections.sort(laptops, new Comparator<Laptop>() {
             @Override
             public int compare(Laptop o1, Laptop o2) {
-                return o1.getPrice()>o2.getPrice()?1:-1;
+                return o1.getPrice()<o2.getPrice()?1:-1;
             }
         });
 

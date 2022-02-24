@@ -11,5 +11,11 @@ otherwise  We will get RunTimeException :ClassCastException
 
 4)The implementation in a TreeSet is not synchronized
 
+HashSet vs LinkedHashSet vs TreeSet
+
+HashSet: Doesnt maintains order , have unique elements(uses hashcode and equals())
+LinkedHashSet: Maintains insertion order(uses hashcode() and equals())
+TreeSet: Maintains asceding order(user compareTo())
+
 
 
