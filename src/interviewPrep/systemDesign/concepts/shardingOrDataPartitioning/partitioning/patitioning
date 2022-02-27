@@ -1,0 +1,10 @@
+Partitioning
+
+1. There are 2 types of partitioning
+    a) Horizontal Partitioning: Divide large tables by rows
+    b) Vertical Partitioning: Divide large tables by columns
+
+The most famous techniques used in Horizontal Partitiong is Sharding
+
+Sharding - Its is specific type of Horizontal Partitioning based on shard key
+
