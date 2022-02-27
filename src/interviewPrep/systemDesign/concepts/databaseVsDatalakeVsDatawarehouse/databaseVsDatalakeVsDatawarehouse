@@ -1,0 +1,19 @@
+Database:
+
+1. Can be SQL or NOSQL db
+2. Mainly used for txs/read/write/store and not for data analytics
+
+
+Datalake:
+
+1. Store raw data and could be structured and unstuctured data
+2. Just throw stuff which we dont know how can we use it
+3. Can be a ML Model artifacts, realtime data, etc
+Ex: Azure Datalake
+
+
+DataWareHouse:
+
+1. Used for Business Intelligence
+2. Optimized to perform data analytics
+Ex: Snowflake

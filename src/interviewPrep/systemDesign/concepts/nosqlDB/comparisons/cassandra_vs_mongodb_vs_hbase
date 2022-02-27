@@ -1,0 +1,27 @@
+Cassandra:
+
+1. Columnar DB: Stores data in hard-disk in columnar way
+2. Cassandra is highly availableand follows AP of CAP Theorem
+3. Cassandra have write capabilities on more then one node, so master is more then one for write
+4. CQL is quering language
+5. databases are knows as keyspace in cassandra and column family are tables
+6. Cassandra contains various keys: prrimary,partition,composite,clustering keys
+7. Composite key= partitionkey + clusteringkey
+
+
+Mongodb:
+
+1. It is DocumentDb: data is stored in document/json under collections
+2. Mongodb is high;y consistent and follows CP from CAP
+3. Mongodb is highly consistent and eventual-consistent(if configured to read from secondary node that is not master node)
+4. It is highly consistent because the reads are performed on master node, it can become eventual consistent if the read is performed
+from secondary nodes
+5. JS Queries for quering // not so mature as compared to Cassandra
+
+
+HBASE:
+
+1. It is also columnardb and runs on top of hive
+2. Follows CP from CAP
+3. It uses map reduce to query the data
+4. Used for Highly large analysis and to aggregate data

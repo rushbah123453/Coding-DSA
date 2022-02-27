@@ -1,0 +1,22 @@
+SQL:
+
+1. Structured data
+2. SQL Query language used for queries
+3. Use SQL When
+    a) Data is structured and unchanging
+    b) ACID Compliant
+    c) Relation is required while extracting data
+4. Horizontal scaling is achievable but complex
+5. vertical scaling comes with a limitation of cpu,storage and is costly
+
+
+
+NoSQL:
+
+1. Unstuctured Data
+2. Unstuctured Query Language is used (UQL)
+3. Use noSQL when:
+    a) Data is vastly increasing and is unstuctured
+    b) not transactional data
+4. Horizontal scaling is possible and is cheap
+

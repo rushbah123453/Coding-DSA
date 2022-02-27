@@ -1,0 +1,29 @@
+Sharding
+
+1. sharding comes under the umbrella of partitioning
+2. There are mainly 2 types of sharding
+    a) Horizontal sharding
+    b) vertical sharding
+3. It is an optimization technique for storing databases
+
+
+Lets assume you have 3 instances of db s1,s2,s3 and 3 masters for each m1,m2,m3
+now when a request comes, an hashing algorithm will convert it to one of this (s1,s2,s3)
+and then route to one of this instances.
+
+This hashing algoritm can be a
+    1) database or
+    2) Routing service
+
+Pros of sharding:
+
+1. Scalability
+2. Availability
+3. Fault Tolerance
+
+Cons of Sharding:
+
+1. Complexity of sharding the data: introducing routing service and maintaining it
+2. Non uniformity of data due to un-uniform data in shards
+3. Resharding of data in shards
+4. Querying could be difficult to bring/join different tables
