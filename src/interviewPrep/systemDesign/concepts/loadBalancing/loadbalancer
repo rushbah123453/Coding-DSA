@@ -1,0 +1,19 @@
+Load Balancer: Used to increase responsivness and spread traffic accross the cluster of services
+
+1. It provides analytics to the admin
+2. Also checks the health of the server using heartbeat
+3. distribution of  traffic could be based on
+    a) Depending on weights
+    b)Low response time
+    c)Least number of connections
+    d)Round robin
+    e)IP Hash
+4. To further increase responsivness add Load balancers at app servers and db level
+
+
+Is load balancer single point of failure?
+-Yes, but we can configure Active Active or Active passive cluster
+
+A cluster can have active active load balancer or active passive load balancers that serves the traffic
+
+

@@ -1,0 +1,13 @@
+1. There are mainly 2 types of proxies
+    a) Forward Proxy
+    b) Reverse Proxy
+
+Forward Proxy:
+
+1. Forward proxies are used to hide clients address/IP
+2. Used for logging clients and can be used as a api gateway
+
+Reverse Proxy:
+
+1. Hide servers idendity
+2. can also act as cache in some cases

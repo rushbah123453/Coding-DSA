@@ -1,0 +1,13 @@
+Indexes:
+
+1. It is used to improve read performance of database.
+2. Mainly used for improving search performance and not for write
+3. More number of indexes can decrease write performances
+
+How indexes work?
+
+Statement: Lets say a user base search books by author name
+Solution: The author column is treated as key and indexed in index table and is sorted.
+1. Index table will have 1 column with sorted author name and other column pointing to actual address of that row
+2. Now this indexes are sorted and can be searched in logn time which decreases read complexity
+3. But on other hand, when the table is updated, the indexes also needs to be updated, hence write performance decreases

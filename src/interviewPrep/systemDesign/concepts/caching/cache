@@ -1,0 +1,21 @@
+Cache: Takes advantages of locality of reference
+
+1. Each app server can have cache on same instance to quickly get data
+2. If App server is seating behind load balancer than each time instances will get random request
+so everytime new calls could happen and cache would not be used in optimised way.
+3. In this case CDN would be a perfect choice
+
+
+Cahe Invalidation: Cache could contain stale data, we could get rid of this stale data using few techniques
+
+1. Write through cache: update dp and cache together
+2. Write around cache: first update db and delete from cache // Not sure though; update this
+3. Writeback cache: update cache then update db
+
+Cache Eviction Policies:
+
+1. FIFO
+2. LIFO
+3. LRU
+4. LFU
+5. Random
