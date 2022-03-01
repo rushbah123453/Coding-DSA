@@ -1,0 +1,8 @@
+1) Is Binary Search Tree
+a) Think about that the value should be greater than all left values and less than all right values not
+just immediate subtree values.
+
+b) Think about the edge cases. If maxValue = Integer.MAX_VALUE, node value can be max value.
+You can in that case take maxValue = Long.MAX_VALUE
+
+c) Brush up some of the concepts
