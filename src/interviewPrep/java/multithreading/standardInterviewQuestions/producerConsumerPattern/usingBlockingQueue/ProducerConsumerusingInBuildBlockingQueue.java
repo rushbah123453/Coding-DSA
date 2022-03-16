@@ -1,0 +1,4 @@
+package interviewPrep.java.multithreading.standardInterviewQuestions.producerConsumerPattern.usingBlockingQueue;
+
+public class ProducerConsumerusingInBuildBlockingQueue {
+}
