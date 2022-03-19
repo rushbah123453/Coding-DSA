@@ -1,4 +1,4 @@
-package interviewPrep.java.multithreading.standardInterviewQuestions.producerConsumerPattern.customBlockingQueue;
+package interviewPrep.java.multithreading.standardInterviewQuestions.producerConsumerPattern.UsingNotifyWait;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -13,41 +13,45 @@ public class MyBlockingQueue<E> {
     private Condition notFull=lock.newCondition();
 
     public MyBlockingQueue(int size) {
+        System.out.println("Blocking queue using notify and wait");
         this.size = size;
         queue = new LinkedList<E>();
     }
 
 
-    public void put(E e) {
-        lock.lock();
+    public synchronized void put(E e) {
+
         try {
-            if(queue.size()==size){
-                notFull.await();
+            synchronized (queue) {
+                if (queue.size() == size) {
+                    queue.wait();
+                }
             }
-            queue.add(e);
-            notEmpty.signalAll();
+            synchronized (queue) {
+                queue.add(e);
+                queue.notifyAll();
+            }
         } catch (InterruptedException ex) {
             ex.printStackTrace();
-        } finally {
-            lock.unlock();
         }
     }
 
-    public E take() {
-        lock.lock();
+    public  E take() {
+
         E item=null;
         try {
-            while (queue.size()==0)
-            {
-                notEmpty.await();
+            synchronized (queue) {
+                while (queue.size() == 0) {
+                    queue.wait();
+                }
             }
-             item = queue.poll();
-            notFull.signalAll();
-            return item;
+            synchronized (queue) {
+                item = queue.poll();
+                queue.notifyAll();
+                return item;
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } finally {
-            lock.unlock();
         }
         return item;
     }

@@ -26,3 +26,9 @@ Integer num2=200;
 num1==num2?true:false
 returns false
 
+Q:
+String s=new String("abc");
+String t="abc";
+will t be pointing to s in heap or will create new object in heap?
+Ans: creates a new object
+

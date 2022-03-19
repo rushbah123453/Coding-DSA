@@ -7,7 +7,7 @@ public class ProducerConsumerusingInBuildBlockingQueue {
 
     public static void main(String[] args) {
 
-        BlockingQueue queue=new ArrayBlockingQueue(5);
+        MyBlockingQueue<Integer> queue=new MyBlockingQueue<>(5);
         Producer producer=new Producer(queue);
         Consumer consumer=new Consumer(queue);
 
@@ -21,9 +21,9 @@ public class ProducerConsumerusingInBuildBlockingQueue {
 }
 
 class Producer implements Runnable {
-    BlockingQueue<Integer> queue;
+    MyBlockingQueue<Integer> queue;
 
-    public Producer(BlockingQueue<Integer> queue) {
+    public Producer(MyBlockingQueue<Integer> queue) {
         this.queue = queue;
     }
 
@@ -45,9 +45,9 @@ class Producer implements Runnable {
 
 class Consumer implements Runnable{
 
-    BlockingQueue<Integer> queue;
+    MyBlockingQueue<Integer> queue;
     int valueTill=Integer.MIN_VALUE;
-    public Consumer(BlockingQueue<Integer> queue){
+    public Consumer(MyBlockingQueue<Integer> queue){
         this.queue=queue;
     }
 
@@ -55,13 +55,9 @@ class Consumer implements Runnable{
     public void run() {
             while(valueTill!=5)
             {
-                try {
-                     valueTill = queue.take();
-                    System.out.println("Consumed "+valueTill);
+                valueTill = queue.take();
+                System.out.println("Consumed "+valueTill);
 
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
             }
     }
 }

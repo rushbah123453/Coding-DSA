@@ -1,0 +1,4 @@
+1. Explain security in spring
+2. authentication vs authorization
+3. how to manage authorization at service level
+4. how to validate token ? if anyone mocks the token what can we do ?

@@ -1,0 +1,20 @@
+TCP:
+
+TCP is a connection-oriented protocol.
+Connection-orientation means that the communicating devices should establish
+a connection before transmitting data and should close the connection after transmitting the data.
+
+TCP is reliable as it guarantees the delivery of data to the destination router.
+
+An acknowledgment segment is present.
+
+UDP:
+
+UDP is the Datagram-oriented protocol.
+This is because there is no overhead for opening a connection,
+maintaining a connection, and terminating a connection.
+UDP is efficient for broadcast and multicast types of network transmission.
+
+The delivery of data to the destination cannot be guaranteed in UDP.
+
+No acknowledgment segment.

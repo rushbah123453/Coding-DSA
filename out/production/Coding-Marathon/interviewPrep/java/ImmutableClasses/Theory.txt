@@ -10,3 +10,23 @@ String is immutable class in java
 
 Immutable objects are thread safe because being immutable,
 no matter which thread reads their values, they get the right values: they are immune to "memory consistency errors".
+
+Why strings are immutable?
+1) Security
+2) SCP
+3) Save memory
+
+Example:
+Lets assume that string where mutable, and key is string in hashmap,
+
+String key="abc";
+so map.put(key,"pune");
+now internally hashmap will create hash-> #234 - > 15%10-> index=5 of bucket of linkedlist
+so at a[5] -> a linkedlist with key="abc" and value="pune" is stored
+
+now you change the string
+key="xyz";
+
+map.get(key) -> hashcode will be different -> and will return null
+-> if somehow hashcode turns out to be same -> then will do equals -> will return pune
+This is inconsistent behaviour right ?
