@@ -1,0 +1,147 @@
+Reference:https://www.educative.io/courses/grokking-the-system-design-interview/3jYKmrVAPGQ
+
+Requirement:
+
+    A) Functional:
+
+    1) To build rate limiter that can limit the api calls of users/sec
+    A user can send only one message per second.
+    A user is allowed only three failed credit card transactions per day.
+    A single IP can only create twenty accounts per day.
+    2)Limit the number of requests an entity can send to an API within a time window, e.g., 15 requests per second.
+
+    B) Non Functional:
+
+    1) Should be highly available and reliable and scalable
+
+
+
+
+
+
+Estimation:
+
+~ 100 million active users per day
+~ 100 million requests per day
+~ 4.5 million RPH or 4500/60 x 10^3 i.e 70k RequestPerSecond
+
+Let’s assume ‘UserID’ takes 8 bytes. Let’s also assume a 2 byte ‘Count’,
+which can count up to 65k, is sufficient for our use case.
+Although epoch time will need 4 bytes, we can choose to store only
+the minute and second part, which can fit into 2 bytes. Hence, we need a total of 12 bytes to store a user’s data:
+
+8 + 2 + 2 = 12 bytes
+Let’s assume our hash-table has an overhead of 20 bytes for each record.
+If we need to track one million users at any time, the total memory we would need would be 32MB:
+
+(12 + 20) bytes * 1 million => 32MB
+
+
+
+
+
+
+Throttling types:
+
+Here are the three famous throttling types that are used by different services:
+
+Hard Throttling: The number of API requests cannot exceed the throttle limit.
+
+Soft Throttling: In this type, we can set the API request limit to exceed a certain percentage.
+For example, if we have rate-limit of 100 messages a minute and 10% exceed-limit, our rate limiter
+will allow up to 110 messages per minute.
+
+Elastic or Dynamic Throttling: Under Elastic throttling, the number of requests can go beyond
+the threshold if the system has some resources available. For example, if a user is allowed only
+100 messages a minute, we can let the user send more than 100 messages a minute when there are
+free resources available in the system.
+
+Algorithm:
+
+1) Fixed Window Algorithm: In this algorithm,
+the time window is considered from the start of the time-unit to the end
+of the time-unit. For example, a period would be considered 0-60 seconds for
+a minute irrespective of the time frame at which the API request has been made.
+In the diagram below, there are two messages between 0-1 second and three messages between 1-2 seconds.
+If we have a rate limiting of two messages a second, this algorithm will throttle only ‘m5’.
+
+2)Rolling Window Algorithm: In this algorithm, the time window is considered from
+the fraction of the time at which the request is made plus the time window length.
+For example, if there are two messages sent at the 300th millisecond and 400th millisecond of a second,
+we’ll count them as two messages from the 300th millisecond of that second up to the 300th millisecond
+of next second. In the above diagram, keeping two messages a second, we’ll throttle ‘m3’ and ‘m4’.
+
+Logic:
+Let’s assume our rate limiter is allowing three requests per minute per user,
+so whenever a new request comes in, our rate limiter will perform the following steps:
+
+If the ‘UserID’ is not present in the hash-table, insert it,
+set the ‘Count’ to 1, set ‘StartTime’ to the current time (normalized to a minute), and allow the request.
+
+Otherwise, find the record of the ‘UserID’ and if CurrentTime – StartTime >= 1 min,
+set the ‘StartTime’ to the current time, ‘Count’ to 1, and allow the request.
+
+If CurrentTime - StartTime <= 1 min and
+
+If ‘Count < 3’, increment the Count and allow the request.
+If ‘Count >= 3’, reject the request.
+
+
+
+
+
+
+
+
+
+API Design :
+
+isAllowed(userId) it will return true or false if the count is within limit
+
+
+
+
+
+
+Database Design:
+
+UserRate Table
+
+UserId : UUID
+AllowedRate: Long
+CurrentRate: Long
+OverRequestCount: Long
+
+
+
+HLD:
+
+Client -> LB (ip based routing )-> [ AppServer ] -> Each AppServer have redis cache -> Store the logs in nosql/cassandra db
+
+
+We can use a cache i.e redis and LRU Eviction policy with write back techniques
+
+
+IP: In this scheme, we throttle requests per-IP; although it’s not optimal in terms of
+differentiating between ‘good’ and ‘bad’ actors, it’s still better than not have rate
+limiting at all. The biggest problem with IP based throttling is when multiple users
+share a single public IP like in an internet cafe or smartphone users that are using the
+same gateway. One bad user can cause throttling to other users. Another issue could arise
+while caching IP-based limits, as there are a huge number of IPv6 addresses available to a
+hacker from even one computer, it’s trivial to make a server run out of memory tracking IPv6 addresses!
+
+User: Rate limiting can be done on APIs after user authentication. Once authenticated,
+the user will be provided with a token which the user will pass with each request.
+This will ensure that we will rate limit against a particular API that has a valid
+authentication token. But what if we have to rate limit on the login API itself?
+The weakness of this rate-limiting would be that a hacker can perform a denial of
+service attack against a user by entering wrong credentials up to the limit; after
+that the actual user will not be able to log-in.
+
+How about if we combine the above two schemes?
+
+Hybrid: A right approach could be to do both per-IP and per-user rate limiting,
+as they both have weaknesses when implemented alone, though, this will result in
+more cache entries with more details per entry, hence requiring more memory and storage.
+
+
