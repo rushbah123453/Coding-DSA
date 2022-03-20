@@ -1,0 +1,26 @@
+
+Round-1
+1. Code: Min stack : using linked list
+2. Code: Find maximum element in min heap
+3. Heapify
+4. String constant pool concept
+
+Round-2
+5. Hashmap internals
+6. TreeMap vs LinkedHashMap
+7. Concurrent vs AsyncMap and applications
+8. Threadsafety in maps
+9. Abstract vs interface
+9b) 1-> What is priority queue, time and space complexities of it
+    2-> Employess name and salary is given, put it in such a ds that max salary is always on top
+
+
+Round-3
+1. Deep Dive in projects
+2. HLD of projects
+3. HTTP Status codes
+4. Exceptions
+5. Retries and implementation of retry
+6. Dead letter queues
+7. Hysterix and few netflix libraries
+8. Motivation to join walmart?

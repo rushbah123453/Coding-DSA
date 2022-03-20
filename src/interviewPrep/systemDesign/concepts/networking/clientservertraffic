@@ -1,0 +1,7 @@
+1.The server can handle any number of requests from uniuque ips
+2. One client ip can open atmax 2^16 connections(~655355) due to the port are of 16 bit
+3. Each connection is labelled using client ip, server ip, server port, client port
+4. server port and ip are constant, 1 client can have 1 ip and 2^16 ports, so max ports/connections for 1 client is 2^16
+5. So now you can have any number of client connections with server ? No there is a catch here
+6. Each client connections goes to reverse proxy and then the source/client ip is terminated with reverse proxy ip
+7. so number of connections that can be established are (2^16 x number of reverse proxy)

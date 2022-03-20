@@ -4,7 +4,7 @@ public class b1_LongestCommonSubstringRecursive {
 
     static int max=Integer.MIN_VALUE;
     public static void main(String[] args) {
-        String y="abcdaf";
+        String y="bhabcdaf";
         String x="acbcdf";
         int ans=findLCS(x,y,x.length(),y.length());
         System.out.println("LCS is "+max);

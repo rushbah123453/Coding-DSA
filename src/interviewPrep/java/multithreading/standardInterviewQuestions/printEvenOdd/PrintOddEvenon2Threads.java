@@ -1,4 +1,4 @@
-package interviewPrep.java.multithreading;
+package interviewPrep.java.multithreading.standardInterviewQuestions.printEvenOdd;
 
 public class PrintOddEvenon2Threads  implements Runnable{
 

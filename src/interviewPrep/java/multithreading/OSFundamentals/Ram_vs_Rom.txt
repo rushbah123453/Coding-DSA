@@ -1,0 +1,11 @@
+RAM
+
+1. RAM is a volatile memory which could store the data as long as the power is supplied
+2. Data stored in RAM can be retrieved and altered.
+3. It is a high-speed memory.
+
+ROM
+
+1. ROM is a non-volatile memory which could retain the data even when power is turned off.
+2. Data stored in ROM can only be read.
+3. It is much slower than the RAM.
