@@ -1,7 +1,0 @@
-Checked Exception :
-
-We need to handle this kind of exception , otherwise it wont compile
-i.ecode wont get converted into executable code
-
-How JVM knows that it is checked exception ?
--Every class extended with Exception is eligible checked Exception
