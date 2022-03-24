@@ -1,3 +1,5 @@
+Generally you have source systems and target systems
+
 Kafka is :
 
 1. Distributed

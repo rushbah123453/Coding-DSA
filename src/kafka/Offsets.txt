@@ -1,0 +1,19 @@
+Kafka version 0.9v and above provide the capability to store the topic offsets on the broker directly instead of relying on the Zookeeper.
+
+Offset Storage - Kafka
+
+Offsets in Kafka are stored as messages in a separate topic named '__consumer_offsets' . Each consumer commits a message into the topic at periodic intervals. The message contains the metadata related to the current offset, the consumer group , partition number, topic associated with the offset and other useful information.
+
+Reading Offsets From Kafka
+
+Since __consumer_offsets is a just like any other topic, its possible to consume the message off. Before we do that we need make this topic visible to the consumers since this is an internal KAFKA topic and is not visible to the consumers by default. In order to make the topic visible, execute the following command.
+
+Sample msg published
+{
+    "topic": "topicName",
+    "partition": 11,
+    "group":,
+    "version":,
+    "offset": 15,
+    "metadata:
+}

@@ -1,0 +1,21 @@
+Video tutorial: https://www.youtube.com/watch?v=IIgHG_YHXPE&list=PLqM7alHXFySEJYFqrpxG4eTbUAiX6jD0Y&index=8
+
+1) To avoid race condition we use synchronization
+2) Lock is used in order to avoid race condition
+
+Types of synchronization
+1) Synchronized method (Object level lock)
+The entire method is synchronized ie. only one object can access at a time
+Less performant than synchronized block.
+
+2) Synchronized block (Object level lock)
+Only a block of code is synchronized. Multiple threads can access the method, but the
+block of code will be accessed only by one thread at a time.
+More performant than synchronized method.
+This method solves read modify write race condition
+
+3) Static synchronized (Class level lock)
+Static method is synchronized
+
+Class level and object level locks are two different locks. Even if class level lock is acquired, some
+other thread can access object level locks.

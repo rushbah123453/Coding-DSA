@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 class PageVisitCounter {
     Map<String, Long> pageVisitMap = new ConcurrentHashMap<>();
 
-    public void onPageVisit(String page) {
+    public synchronized void onPageVisit(String page) {
         // implement
         pageVisitMap.put(page, pageVisitMap.getOrDefault(page, 0L) + 1);
     }

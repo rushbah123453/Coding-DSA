@@ -1,0 +1,10 @@
+Until now, Apache ZooKeeper was used by Kafka as a metadata store. Metadata for partitions and brokers were stored to the ZooKeeper quorum that was also responsible for Kafka Controller election.
+
+ZooKeeper is an external system to Kafka which means that it comes with its own configuration syntax, management tools and best practices. Therefore, if you wanted to deploy a Kafka cluster then you would also had to manage, deploy, and monitor Zookeeper as well. Since these two distributed systems require different configuration the level of complexity increases and thus it is much easier for system administrators to make mistakes. Having two systems also leads to duplication of work— for example, in order to enable security features you would have to apply the relevant configuration to both services.
+
+Having an external metadata store is inefficient in terms of resources as you need to run additional processes. Furthermore, this limits the scalability of Kafka itself. Every time the cluster is starting up, the Kafka controller must load the state of the cluster from ZooKeeper.
+The same happens when a new controller is being elected. Given that the amount of metadata gets bigger over time, this means that the loading of such metadata becomes more inefficient over time leading to high loading processes and thus it limits the number of partitions the cluster can store.
+
+
+KPI stands for Kafka Improvement Proposals and KPI-500 introduces the fundamental architecture of ZooKeeper-less Kafka.
+In the latest release, ZooKeeper can be replaced by an internal Raft quorum of controllers. When Kafka Raft Metadata mode is enabled, Kafka will store its metadata and configurations into a topic called @metadata. This internal topic is managed by the internal quorum and replicated across the cluster. The nodes of the cluster can now serve as brokers, controllers or both (called combined nodes).
