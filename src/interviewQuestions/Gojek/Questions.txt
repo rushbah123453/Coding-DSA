@@ -1,0 +1,13 @@
+1) Project Architecture with production issues
+2) What would you do differently in your project
+3) LLD for a system similar to redis
+Operations
+- setValue(String value, String time)
+- get(String key)
+- delete(String key)
+
+For the above you can have a hashMap called map
+
+Also you need to think about expiring keys
+For this you can have a separate HashMap called mapExpiry
+And then run a scheduler say every 30 mins to clear all expiring keys

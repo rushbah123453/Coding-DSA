@@ -1,9 +1,0 @@
-Can be used for sorted arrays only
-Initialize two pointer one at start, other at end
-If value > expectedValue decrement end else increment start
-
-example: Algoexpert (solution 2) -> https://www.algoexpert.io/questions/Sorted%20Squared%20Array
-
-Note: If it is stated that array is sorted, it is an indication that we can write and alorithm in a more optimal
-way, possibly in O(n) or O(logn) time
-When its given its sorted, you should use that information as an advantage to reduce complexity

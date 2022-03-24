@@ -1,0 +1,19 @@
+Kafka topics are divided into a number of partitions. Partitions allow you to parallelize a topic by splitting the data into a particular topic across multiple brokers. Each partition can be placed on a separate machine to allow multiple consumers to read from a topic in parallel.
+
+Partitions per topic is the million-dollar question and there’s no one answer. If you have a small cluster of fewer than six brokers, create two times the number of brokers you have ( N X 2 if N < 6). The reasoning behind it is that if you have more brokers over time, maybe if the size of your cluster is12 brokers. Well, at least you will have enough partitions to cover that. For suppose if you have a big cluster over 12 brokers, I would say it’s not necessary to go 2 times the number of brokers, but you can still follow
+
+Basic guidelines for choosing a replication factor
+
+Should be at least two, usually three(recommended), maximum four. So the higher the replication factor, we’re going to get better resilience of your system. If the replication factor gets an issue eg: performance degrades, Its better to get a better broker, never compromise your replication factor, always get better machines if there is a performance issue. Never set it to one(1) in production. If a broker goes down, your partition is offline.
+
+
+Cluster guidelines
+
+It is pretty much accepted that a broker should not hold more than 2000 to 4000 partitions (across all topics of that broker)
+Additionally, a Kafka cluster should have a maximum of 20,000 partitions across all brokers.
+The reason is that in case of brokers going down, Zookeeper needs to perform a lot leader elections.
+If you need more than 20,000 partitions in your cluster, follow the Netflix model and create more Kafka clusters
+
+
+Conclusion
+Overall, you don’t need a topic with 1000 partitions to achieve high throughput Start at a reasonable number and test the performance. You just don’t guess and get it right, you guess and test it

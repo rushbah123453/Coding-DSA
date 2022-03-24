@@ -1,3 +1,13 @@
 wait()
 notify()
 notifyAll()
+
+wait immediately release the lock and thread goes into waiting state.
+notify completes the thread execution and then releases the lock. Once notify is called, the thread in wait state
+can then go into running state
+
+Overloaded wait method
+obj.wait()
+obj.wait(ms): when timeout expires, the thread goes into running once it gets the lock
+obj.wait(ms, ns)
+

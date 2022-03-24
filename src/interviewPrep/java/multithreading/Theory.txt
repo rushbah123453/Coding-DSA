@@ -1,0 +1,11 @@
+1) If there is an exception in one thread, it does not stop other threads working. They will continue as it is.
+2) Even if there is exception in main thread, other threads will continue
+3) When you implement thread by runnable interface, you need to provide your own object to the new Thread.
+check line 36 of "BasicCode" file
+
+Methods on thread
+1) join: usually the main thread will continue once start method on thread is called, but if you call
+join method on thread, then it will wait till the thread is completed.
+
+2) isAlive: returns boolean indicating if thread is still active
+

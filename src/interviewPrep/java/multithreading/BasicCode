@@ -1,0 +1,40 @@
+//Extending thread
+class DoSomeThreadingWithThread extends Thread {
+    @Override
+    public void run() {
+        //Do thing you want to run in multithread
+        for(int i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+//Implementing Runnable
+class DoSomeThreadingWithRunnable implements Runnable {
+    @Override
+    public void run() {
+        //Do thing you want to run in multithread
+        for(int i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        //Spawn 3 threads with thread
+        for(int i = 0; i <= 3; i++) {
+            DoSomeThreadingWithThread t = new DoSomeThreadingWithThread();
+            t.start();
+        }
+
+        //Spawn 3 threads with runnable
+        for(int i = 0; i <= 3; i++) {
+            DoSomeThreadingWithRunnable t = new DoSomeThreadingWithRunnable();
+
+            //You need to create thread and pass the object
+            Thread thread = new Thread(t);
+            thread.start();
+        }
+    }
+}
